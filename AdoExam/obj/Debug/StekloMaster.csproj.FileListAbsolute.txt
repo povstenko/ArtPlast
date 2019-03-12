@@ -1,0 +1,17 @@
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\bin\Debug\WindowShop.mdf
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\bin\Debug\WindowShop_log.ldf
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\bin\Debug\AdoExam.exe.config
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\bin\Debug\AdoExam.exe
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\bin\Debug\AdoExam.pdb
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\bin\Debug\EntityFramework.dll
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\bin\Debug\EntityFramework.xml
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\obj\Debug\StekloMaster.csprojAssemblyReference.cache
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\obj\Debug\AdoExam.fMain.resources
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\obj\Debug\AdoExam.Properties.Resources.resources
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\obj\Debug\StekloMaster.csproj.GenerateResource.cache
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\obj\Debug\StekloMaster.csproj.CoreCompileInputs.cache
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\obj\Debug\StekloMaster.csproj.CopyComplete
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\obj\Debug\AdoExam.exe
+C:\Users\Александр\Documents\GitHub\StekloMaster\AdoExam\obj\Debug\AdoExam.pdb
