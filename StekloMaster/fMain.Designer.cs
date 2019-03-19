@@ -1,247 +1,262 @@
 ﻿namespace StekloMaster
 {
-	partial class fMain
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private System.ComponentModel.IContainer components = null;
+    partial class fMain
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		#region Windows Form Designer generated code
+        #region Windows Form Designer generated code
 
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbxLogin = new System.Windows.Forms.TextBox();
-            this.tbxPassword = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnRegistration = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tbxNewPassword = new System.Windows.Forms.TextBox();
-            this.tbxNewLogin = new System.Windows.Forms.TextBox();
-            this.tbxNewSurname = new System.Windows.Forms.TextBox();
-            this.tbxNewName = new System.Windows.Forms.TextBox();
-            this.tbxNewEmail = new System.Windows.Forms.TextBox();
-            this.chbxAdmin = new System.Windows.Forms.CheckBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
+            this.pMenu = new System.Windows.Forms.Panel();
+            this.pSide = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pTop = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.pMenu.SuspendLayout();
+            this.pTop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnLogin
+            // pMenu
             // 
-            this.btnLogin.Location = new System.Drawing.Point(123, 71);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(95, 23);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "btnLogin";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.pMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.pMenu.Controls.Add(this.pSide);
+            this.pMenu.Controls.Add(this.button7);
+            this.pMenu.Controls.Add(this.button6);
+            this.pMenu.Controls.Add(this.button5);
+            this.pMenu.Controls.Add(this.button4);
+            this.pMenu.Controls.Add(this.button3);
+            this.pMenu.Controls.Add(this.button2);
+            this.pMenu.Controls.Add(this.button1);
+            this.pMenu.Location = new System.Drawing.Point(0, 0);
+            this.pMenu.Name = "pMenu";
+            this.pMenu.Size = new System.Drawing.Size(204, 554);
+            this.pMenu.TabIndex = 6;
+            this.pMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
+            this.pMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
+            this.pMenu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
             // 
-            // groupBox1
+            // pSide
             // 
-            this.groupBox1.Controls.Add(this.tbxPassword);
-            this.groupBox1.Controls.Add(this.tbxLogin);
-            this.groupBox1.Controls.Add(this.btnLogin);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(224, 102);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "login";
+            this.pSide.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pSide.Location = new System.Drawing.Point(0, 58);
+            this.pSide.Name = "pSide";
+            this.pSide.Size = new System.Drawing.Size(10, 54);
+            this.pSide.TabIndex = 5;
             // 
-            // tbxLogin
+            // button7
             // 
-            this.tbxLogin.Location = new System.Drawing.Point(9, 19);
-            this.tbxLogin.Name = "tbxLogin";
-            this.tbxLogin.Size = new System.Drawing.Size(209, 20);
-            this.tbxLogin.TabIndex = 1;
-            this.tbxLogin.Text = "povstenko";
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(9, 498);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(192, 54);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "       FAQ";
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // tbxPassword
+            // button6
             // 
-            this.tbxPassword.Location = new System.Drawing.Point(9, 45);
-            this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(206, 20);
-            this.tbxPassword.TabIndex = 2;
-            this.tbxPassword.Text = "qwerty";
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(12, 328);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(192, 54);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "       ";
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // groupBox2
+            // button5
             // 
-            this.groupBox2.Controls.Add(this.listBox2);
-            this.groupBox2.Controls.Add(this.listBox1);
-            this.groupBox2.Location = new System.Drawing.Point(242, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(730, 587);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "main";
-            this.groupBox2.Visible = false;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(12, 274);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(192, 54);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "       User";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // btnRegistration
+            // button4
             // 
-            this.btnRegistration.Location = new System.Drawing.Point(123, 97);
-            this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(92, 23);
-            this.btnRegistration.TabIndex = 3;
-            this.btnRegistration.Text = "btnRegistration";
-            this.btnRegistration.UseVisualStyleBackColor = true;
-            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(12, 220);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(192, 54);
+            this.button4.TabIndex = 9;
+            this.button4.Text = "       Edit Database";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // groupBox3
+            // button3
             // 
-            this.groupBox3.Controls.Add(this.chbxAdmin);
-            this.groupBox3.Controls.Add(this.tbxNewEmail);
-            this.groupBox3.Controls.Add(this.tbxNewSurname);
-            this.groupBox3.Controls.Add(this.tbxNewName);
-            this.groupBox3.Controls.Add(this.tbxNewPassword);
-            this.groupBox3.Controls.Add(this.btnRegistration);
-            this.groupBox3.Controls.Add(this.tbxNewLogin);
-            this.groupBox3.Location = new System.Drawing.Point(12, 120);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(224, 133);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "registration";
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(12, 166);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(192, 54);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "       Materials";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // tbxNewPassword
+            // button2
             // 
-            this.tbxNewPassword.Location = new System.Drawing.Point(9, 45);
-            this.tbxNewPassword.Name = "tbxNewPassword";
-            this.tbxNewPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbxNewPassword.TabIndex = 2;
-            this.tbxNewPassword.Text = "qwerty";
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(12, 112);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(192, 54);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "       Buy Window";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // tbxNewLogin
+            // button1
             // 
-            this.tbxNewLogin.Location = new System.Drawing.Point(9, 19);
-            this.tbxNewLogin.Name = "tbxNewLogin";
-            this.tbxNewLogin.Size = new System.Drawing.Size(100, 20);
-            this.tbxNewLogin.TabIndex = 1;
-            this.tbxNewLogin.Text = "povstenko";
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(12, 58);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(192, 54);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "       Home";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // tbxNewSurname
+            // pTop
             // 
-            this.tbxNewSurname.Location = new System.Drawing.Point(115, 45);
-            this.tbxNewSurname.Name = "tbxNewSurname";
-            this.tbxNewSurname.Size = new System.Drawing.Size(100, 20);
-            this.tbxNewSurname.TabIndex = 5;
-            this.tbxNewSurname.Text = "Povstenko";
+            this.pTop.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pTop.Controls.Add(this.btnExit);
+            this.pTop.Location = new System.Drawing.Point(0, 0);
+            this.pTop.Name = "pTop";
+            this.pTop.Size = new System.Drawing.Size(995, 24);
+            this.pTop.TabIndex = 7;
+            this.pTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
+            this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
+            this.pTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
             // 
-            // tbxNewName
+            // btnExit
             // 
-            this.tbxNewName.Location = new System.Drawing.Point(115, 19);
-            this.tbxNewName.Name = "tbxNewName";
-            this.tbxNewName.Size = new System.Drawing.Size(100, 20);
-            this.tbxNewName.TabIndex = 4;
-            this.tbxNewName.Text = "Vitaly";
-            // 
-            // tbxNewEmail
-            // 
-            this.tbxNewEmail.Location = new System.Drawing.Point(9, 71);
-            this.tbxNewEmail.Name = "tbxNewEmail";
-            this.tbxNewEmail.Size = new System.Drawing.Size(206, 20);
-            this.tbxNewEmail.TabIndex = 6;
-            this.tbxNewEmail.Text = "vitaly.povstenko@gmail.com";
-            // 
-            // chbxAdmin
-            // 
-            this.chbxAdmin.AutoSize = true;
-            this.chbxAdmin.Location = new System.Drawing.Point(9, 98);
-            this.chbxAdmin.Name = "chbxAdmin";
-            this.chbxAdmin.Size = new System.Drawing.Size(63, 17);
-            this.chbxAdmin.TabIndex = 7;
-            this.chbxAdmin.Text = "IsAdmin";
-            this.chbxAdmin.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(6, 16);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(718, 264);
-            this.listBox1.TabIndex = 0;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(6, 291);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(718, 290);
-            this.listBox2.TabIndex = 1;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(46, 402);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
-            this.btnRefresh.TabIndex = 5;
-            this.btnRefresh.Text = "btnRefresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.Location = new System.Drawing.Point(958, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(37, 24);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "X";
+            this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnExit.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnExit.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 611);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
+            this.ClientSize = new System.Drawing.Size(995, 554);
+            this.Controls.Add(this.pMenu);
+            this.Controls.Add(this.pTop);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fMain";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "StekloShop";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Form1";
+            this.pMenu.ResumeLayout(false);
+            this.pTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
-		}
+        }
 
         #endregion
 
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbxPassword;
-        private System.Windows.Forms.TextBox tbxLogin;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnRegistration;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox tbxNewPassword;
-        private System.Windows.Forms.TextBox tbxNewLogin;
-        private System.Windows.Forms.CheckBox chbxAdmin;
-        private System.Windows.Forms.TextBox tbxNewEmail;
-        private System.Windows.Forms.TextBox tbxNewSurname;
-        private System.Windows.Forms.TextBox tbxNewName;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Panel pMenu;
+        private System.Windows.Forms.Panel pTop;
+        private System.Windows.Forms.Panel pSide;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 
