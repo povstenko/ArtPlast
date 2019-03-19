@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.pMenu = new System.Windows.Forms.Panel();
             this.pSide = new System.Windows.Forms.Panel();
+            this.pTop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -38,15 +40,16 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pTop = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pMenu.SuspendLayout();
             this.pTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenu
             // 
-            this.pMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.pMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(87)))));
+            this.pMenu.Controls.Add(this.pictureBox1);
             this.pMenu.Controls.Add(this.pSide);
             this.pMenu.Controls.Add(this.button7);
             this.pMenu.Controls.Add(this.button6);
@@ -66,10 +69,32 @@
             // pSide
             // 
             this.pSide.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pSide.Location = new System.Drawing.Point(0, 58);
+            this.pSide.Location = new System.Drawing.Point(0, 65);
             this.pSide.Name = "pSide";
             this.pSide.Size = new System.Drawing.Size(10, 54);
             this.pSide.TabIndex = 5;
+            // 
+            // pTop
+            // 
+            this.pTop.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pTop.Controls.Add(this.btnExit);
+            this.pTop.Location = new System.Drawing.Point(0, 0);
+            this.pTop.Name = "pTop";
+            this.pTop.Size = new System.Drawing.Size(995, 24);
+            this.pTop.TabIndex = 7;
+            this.pTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
+            this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
+            this.pTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::StekloMaster.Properties.Resources.artplast;
+            this.pictureBox1.Location = new System.Drawing.Point(48, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(109, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // button7
             // 
@@ -98,7 +123,7 @@
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(12, 328);
+            this.button6.Location = new System.Drawing.Point(12, 337);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(192, 54);
             this.button6.TabIndex = 7;
@@ -116,7 +141,7 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 274);
+            this.button5.Location = new System.Drawing.Point(12, 283);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(192, 54);
             this.button5.TabIndex = 8;
@@ -134,7 +159,7 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 220);
+            this.button4.Location = new System.Drawing.Point(12, 229);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(192, 54);
             this.button4.TabIndex = 9;
@@ -152,7 +177,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 166);
+            this.button3.Location = new System.Drawing.Point(12, 175);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(192, 54);
             this.button3.TabIndex = 10;
@@ -170,7 +195,7 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 112);
+            this.button2.Location = new System.Drawing.Point(12, 121);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 54);
             this.button2.TabIndex = 11;
@@ -188,7 +213,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 58);
+            this.button1.Location = new System.Drawing.Point(12, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 54);
             this.button1.TabIndex = 12;
@@ -197,30 +222,19 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // pTop
-            // 
-            this.pTop.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pTop.Controls.Add(this.btnExit);
-            this.pTop.Location = new System.Drawing.Point(0, 0);
-            this.pTop.Name = "pTop";
-            this.pTop.Size = new System.Drawing.Size(995, 24);
-            this.pTop.TabIndex = 7;
-            this.pTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
-            this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
-            this.pTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
-            // 
             // btnExit
             // 
+            this.btnExit.BackgroundImage = global::StekloMaster.Properties.Resources.close;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(958, 0);
+            this.btnExit.Location = new System.Drawing.Point(949, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(37, 24);
+            this.btnExit.Size = new System.Drawing.Size(46, 24);
             this.btnExit.TabIndex = 8;
-            this.btnExit.Text = "X";
             this.btnExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -235,11 +249,13 @@
             this.Controls.Add(this.pMenu);
             this.Controls.Add(this.pTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pMenu.ResumeLayout(false);
             this.pTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,6 +273,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

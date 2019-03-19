@@ -22,9 +22,6 @@ namespace StekloMaster
         {
             InitializeComponent();
 
-            label3.Parent = pictureBox1;
-            label3.BackColor = Color.Transparent;
-
             btnExit.Parent = pictureBox1;
             btnExit.BackColor = Color.Transparent;
 
@@ -50,13 +47,13 @@ namespace StekloMaster
             {
                 lbl1.Text = "Have an account?";
                 lbl2.Text = "Log In.";
-                label3.Top = 30;
+                label3.Top = 20;
             }
             else
             {
                 lbl1.Text = "Don't have an account?";
                 lbl2.Text = "Sign Up.";
-                label3.Top = 80;
+                label3.Top = 50;
             }
             signIn.Visible = !signIn.Visible;
             signUp.Visible = !signUp.Visible;

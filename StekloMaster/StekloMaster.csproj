@@ -140,6 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="loginBackground.png" />
+    <None Include="artplast.png" />
+    <None Include="artplast_bg.png" />
+    <None Include="close.png" />
     <Content Include="WindowShop.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
