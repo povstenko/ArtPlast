@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StekloMaster", "StekloMaster\StekloMaster.csproj", "{05EA8529-9050-4F22-8364-11F64EC74DCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design", "Design\Design.csproj", "{581F7551-8CF8-45EE-BE38-F488215E168F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +15,10 @@ Global
 		{05EA8529-9050-4F22-8364-11F64EC74DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05EA8529-9050-4F22-8364-11F64EC74DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05EA8529-9050-4F22-8364-11F64EC74DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{581F7551-8CF8-45EE-BE38-F488215E168F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{581F7551-8CF8-45EE-BE38-F488215E168F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{581F7551-8CF8-45EE-BE38-F488215E168F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{581F7551-8CF8-45EE-BE38-F488215E168F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
