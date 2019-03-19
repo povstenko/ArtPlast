@@ -20,40 +20,13 @@ namespace StekloMaster
             InitializeComponent();
             pSide.Height = button1.Height;
             pSide.Top = button1.Top;
-
-            HidePages();
-            pageHome.Visible = true;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        private void HidePages()
-        {
-            pageHome.Visible = false;
-            pageOrder.Visible = false;
-
-        }
-        private void MoveSidePointer(Button btn)
-        {
-            pSide.Height = btn.Height;
-            pSide.Top = btn.Top;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            HidePages();
-            MoveSidePointer((Button)sender);
-            pageHome.Visible = true;
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            HidePages();
-            MoveSidePointer((Button)sender);
-            pageOrder.Visible = true;
-        }
+        
 
 
 
@@ -106,7 +79,5 @@ namespace StekloMaster
         {
             btnExit.BackColor = Color.DodgerBlue;
         }
-
-        
     }
 }
