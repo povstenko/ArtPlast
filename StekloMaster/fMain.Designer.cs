@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.pMenu = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pSide = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -41,6 +41,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pTop = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pageOrder = new StekloMaster.PageOrder();
+            this.pageHome = new StekloMaster.PageHome();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pTop.SuspendLayout();
@@ -49,8 +51,8 @@
             // pMenu
             // 
             this.pMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(40)))), ((int)(((byte)(87)))));
-            this.pMenu.Controls.Add(this.pictureBox1);
             this.pMenu.Controls.Add(this.pSide);
+            this.pMenu.Controls.Add(this.pictureBox1);
             this.pMenu.Controls.Add(this.button7);
             this.pMenu.Controls.Add(this.button6);
             this.pMenu.Controls.Add(this.button5);
@@ -66,6 +68,14 @@
             this.pMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
             this.pMenu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
             // 
+            // pSide
+            // 
+            this.pSide.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pSide.Location = new System.Drawing.Point(0, 65);
+            this.pSide.Name = "pSide";
+            this.pSide.Size = new System.Drawing.Size(10, 54);
+            this.pSide.TabIndex = 5;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::StekloMaster.Properties.Resources.artplast;
@@ -76,14 +86,6 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // pSide
-            // 
-            this.pSide.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pSide.Location = new System.Drawing.Point(0, 65);
-            this.pSide.Name = "pSide";
-            this.pSide.Size = new System.Drawing.Size(10, 54);
-            this.pSide.TabIndex = 5;
-            // 
             // button7
             // 
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -93,14 +95,13 @@
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(9, 498);
+            this.button7.Location = new System.Drawing.Point(7, 498);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(192, 54);
             this.button7.TabIndex = 6;
-            this.button7.Text = "       Support";
+            this.button7.Text = "       FAQ";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // button6
             // 
@@ -111,14 +112,13 @@
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(12, 337);
+            this.button6.Location = new System.Drawing.Point(10, 337);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(192, 54);
             this.button6.TabIndex = 7;
-            this.button6.Text = "       Account";
+            this.button6.Text = "       ";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // button5
             // 
@@ -129,14 +129,13 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(12, 283);
+            this.button5.Location = new System.Drawing.Point(10, 283);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(192, 54);
             this.button5.TabIndex = 8;
-            this.button5.Text = "       Delivery";
+            this.button5.Text = "       User";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // button4
             // 
@@ -147,14 +146,13 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 229);
+            this.button4.Location = new System.Drawing.Point(10, 229);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(192, 54);
             this.button4.TabIndex = 9;
-            this.button4.Text = "       Database";
+            this.button4.Text = "       Edit Database";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // button3
             // 
@@ -165,14 +163,13 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 175);
+            this.button3.Location = new System.Drawing.Point(10, 175);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(192, 54);
             this.button3.TabIndex = 10;
             this.button3.Text = "       Materials";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // button2
             // 
@@ -183,14 +180,14 @@
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 121);
+            this.button2.Location = new System.Drawing.Point(10, 121);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 54);
             this.button2.TabIndex = 11;
             this.button2.Text = "       Buy Window";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.btnMenu_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -201,14 +198,14 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 67);
+            this.button1.Location = new System.Drawing.Point(10, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 54);
             this.button1.TabIndex = 12;
             this.button1.Text = "       Home";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnMenu_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pTop
             // 
@@ -241,13 +238,31 @@
             this.btnExit.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
             this.btnExit.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
+            // pageOrder
+            // 
+            this.pageOrder.BackColor = System.Drawing.Color.White;
+            this.pageOrder.Location = new System.Drawing.Point(204, 24);
+            this.pageOrder.Name = "pageOrder";
+            this.pageOrder.Size = new System.Drawing.Size(788, 528);
+            this.pageOrder.TabIndex = 9;
+            // 
+            // pageHome
+            // 
+            this.pageHome.BackColor = System.Drawing.Color.White;
+            this.pageHome.Location = new System.Drawing.Point(204, 24);
+            this.pageHome.Name = "pageHome";
+            this.pageHome.Size = new System.Drawing.Size(788, 528);
+            this.pageHome.TabIndex = 10;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 554);
+            this.Controls.Add(this.pageHome);
             this.Controls.Add(this.pMenu);
             this.Controls.Add(this.pTop);
+            this.Controls.Add(this.pageOrder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMain";
@@ -274,6 +289,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private PageHome pageHome;
+        private PageOrder pageOrder;
+       // private PageHome pageHome1;
     }
 }
 

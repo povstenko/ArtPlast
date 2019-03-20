@@ -76,7 +76,7 @@
     <Compile Include="fMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMain.Designer.cs">
+    <Compile Include="fMain.designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
     <Compile Include="fMainDemo.cs">
@@ -84,6 +84,18 @@
     </Compile>
     <Compile Include="fMainDemo.Designer.cs">
       <DependentUpon>fMainDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageHome.designer.cs">
+      <DependentUpon>PageHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageOrder.designer.cs">
+      <DependentUpon>PageOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +119,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMainDemo.resx">
       <DependentUpon>fMainDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageHome.resx">
+      <DependentUpon>PageHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageOrder.resx">
+      <DependentUpon>PageOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -143,6 +161,7 @@
     <None Include="artplast.png" />
     <None Include="artplast_bg.png" />
     <None Include="close.png" />
+    <None Include="bin\Debug\img\1.jpg" />
     <Content Include="WindowShop.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
