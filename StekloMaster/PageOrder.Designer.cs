@@ -29,26 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageOrder));
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pbGallery = new System.Windows.Forms.PictureBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pbGallery = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGallery)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(43, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "WINDOW";
             // 
             // label2
             // 
@@ -68,15 +57,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(392, 250);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // pbGallery
-            // 
-            this.pbGallery.BackColor = System.Drawing.Color.RosyBrown;
-            this.pbGallery.Location = new System.Drawing.Point(37, 56);
-            this.pbGallery.Name = "pbGallery";
-            this.pbGallery.Size = new System.Drawing.Size(250, 250);
-            this.pbGallery.TabIndex = 1;
-            this.pbGallery.TabStop = false;
             // 
             // richTextBox1
             // 
@@ -99,6 +79,26 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Description";
             // 
+            // pbGallery
+            // 
+            this.pbGallery.BackColor = System.Drawing.Color.RosyBrown;
+            this.pbGallery.Location = new System.Drawing.Point(37, 56);
+            this.pbGallery.Name = "pbGallery";
+            this.pbGallery.Size = new System.Drawing.Size(250, 250);
+            this.pbGallery.TabIndex = 1;
+            this.pbGallery.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(43, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "WINDOW";
+            // 
             // PageOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,12 +120,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pbGallery;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pbGallery;
+        private System.Windows.Forms.Label label1;
     }
 }
