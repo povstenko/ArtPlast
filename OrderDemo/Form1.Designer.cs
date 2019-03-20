@@ -1,6 +1,6 @@
 ﻿namespace OrderDemo
 {
-    partial class Form1
+    partial class fExpandMenuDemo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,68 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.btn1 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fExpandMenuDemo));
+            this.b1 = new System.Windows.Forms.Button();
+            this.b2 = new System.Windows.Forms.Button();
+            this.b3 = new System.Windows.Forms.Button();
             this.p1 = new System.Windows.Forms.Panel();
             this.p2 = new System.Windows.Forms.Panel();
             this.p3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // btn1
+            // b1
             // 
-            this.btn1.BackColor = System.Drawing.SystemColors.Menu;
-            this.btn1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn1.FlatAppearance.BorderSize = 0;
-            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn1.Image = ((System.Drawing.Image)(resources.GetObject("btn1.Image")));
-            this.btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn1.Location = new System.Drawing.Point(12, 12);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(267, 23);
-            this.btn1.TabIndex = 0;
-            this.btn1.Tag = "0";
-            this.btn1.Text = "Frame";
-            this.btn1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn1.Click += new System.EventHandler(this.button1_Click);
+            this.b1.BackColor = System.Drawing.SystemColors.Menu;
+            this.b1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b1.FlatAppearance.BorderSize = 0;
+            this.b1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b1.Image = ((System.Drawing.Image)(resources.GetObject("b1.Image")));
+            this.b1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.b1.Location = new System.Drawing.Point(12, 12);
+            this.b1.Name = "b1";
+            this.b1.Size = new System.Drawing.Size(588, 40);
+            this.b1.TabIndex = 0;
+            this.b1.Tag = "0";
+            this.b1.Text = "Frame";
+            this.b1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.b1.UseVisualStyleBackColor = false;
+            this.b1.Click += new System.EventHandler(this.ExpandMenu1_Click);
             // 
-            // btn2
+            // b2
             // 
-            this.btn2.BackColor = System.Drawing.SystemColors.Menu;
-            this.btn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn2.FlatAppearance.BorderSize = 0;
-            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn2.Image = ((System.Drawing.Image)(resources.GetObject("btn2.Image")));
-            this.btn2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn2.Location = new System.Drawing.Point(12, 147);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(267, 23);
-            this.btn2.TabIndex = 1;
-            this.btn2.Tag = "0";
-            this.btn2.Text = "Glass";
-            this.btn2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn2.Click += new System.EventHandler(this.btn2_Click);
+            this.b2.BackColor = System.Drawing.SystemColors.Menu;
+            this.b2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b2.FlatAppearance.BorderSize = 0;
+            this.b2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b2.Image = ((System.Drawing.Image)(resources.GetObject("b2.Image")));
+            this.b2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.b2.Location = new System.Drawing.Point(12, 147);
+            this.b2.Name = "b2";
+            this.b2.Size = new System.Drawing.Size(267, 23);
+            this.b2.TabIndex = 1;
+            this.b2.Tag = "0";
+            this.b2.Text = "Glass";
+            this.b2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.b2.UseVisualStyleBackColor = false;
+            this.b2.Click += new System.EventHandler(this.ExpandMenu2_Click);
             // 
-            // btn3
+            // b3
             // 
-            this.btn3.BackColor = System.Drawing.SystemColors.Menu;
-            this.btn3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn3.FlatAppearance.BorderSize = 0;
-            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btn3.Image = ((System.Drawing.Image)(resources.GetObject("btn3.Image")));
-            this.btn3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn3.Location = new System.Drawing.Point(12, 282);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(267, 23);
-            this.btn3.TabIndex = 2;
-            this.btn3.Tag = "0";
-            this.btn3.Text = "Furniture";
-            this.btn3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn3.Click += new System.EventHandler(this.btn3_Click);
+            this.b3.BackColor = System.Drawing.SystemColors.Menu;
+            this.b3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b3.FlatAppearance.BorderSize = 0;
+            this.b3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b3.Image = ((System.Drawing.Image)(resources.GetObject("b3.Image")));
+            this.b3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.b3.Location = new System.Drawing.Point(12, 282);
+            this.b3.Name = "b3";
+            this.b3.Size = new System.Drawing.Size(267, 23);
+            this.b3.TabIndex = 2;
+            this.b3.Tag = "0";
+            this.b3.Text = "Furniture";
+            this.b3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.b3.UseVisualStyleBackColor = false;
+            this.b3.Click += new System.EventHandler(this.ExpandMenu3_Click);
             // 
             // p1
             // 
@@ -118,29 +121,29 @@
             this.p3.TabIndex = 5;
             this.p3.Visible = false;
             // 
-            // Form1
+            // fExpandMenuDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(612, 509);
+            this.ClientSize = new System.Drawing.Size(612, 461);
             this.Controls.Add(this.p3);
             this.Controls.Add(this.p2);
             this.Controls.Add(this.p1);
-            this.Controls.Add(this.btn3);
-            this.Controls.Add(this.btn2);
-            this.Controls.Add(this.btn1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.b3);
+            this.Controls.Add(this.b2);
+            this.Controls.Add(this.b1);
+            this.Name = "fExpandMenuDemo";
+            this.Text = "ExpandMenu Demo";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button btn3;
+        private System.Windows.Forms.Button b1;
+        private System.Windows.Forms.Button b2;
+        private System.Windows.Forms.Button b3;
         private System.Windows.Forms.Panel p1;
         private System.Windows.Forms.Panel p2;
         private System.Windows.Forms.Panel p3;
