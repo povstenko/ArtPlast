@@ -85,6 +85,18 @@
     <Compile Include="fMainDemo.Designer.cs">
       <DependentUpon>fMainDemo.cs</DependentUpon>
     </Compile>
+    <Compile Include="PageOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageOrder.Designer.cs">
+      <DependentUpon>PageOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageHome.Designer.cs">
+      <DependentUpon>PageHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LogInPage.cs">
@@ -107,6 +119,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMainDemo.resx">
       <DependentUpon>fMainDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageOrder.resx">
+      <DependentUpon>PageOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageHome.resx">
+      <DependentUpon>PageHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
