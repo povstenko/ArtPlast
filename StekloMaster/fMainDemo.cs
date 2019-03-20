@@ -20,7 +20,7 @@ namespace StekloMaster
         SqlCommand cmd = null;
         string DIR_PATH = Directory.GetCurrentDirectory() + "..\\..\\..\\";
         bool checking = false;
-        bool isAdmin = false;
+
         public fMainDemo()
 		{
 			InitializeComponent();
