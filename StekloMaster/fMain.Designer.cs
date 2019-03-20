@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.pMenu = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pSide = new System.Windows.Forms.Panel();
+            this.pTop = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -39,13 +40,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pTop = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
             this.pageHome = new StekloMaster.PageHome();
             this.pageOrder = new StekloMaster.PageOrder();
             this.pMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pMenu
@@ -68,6 +68,26 @@
             this.pMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
             this.pMenu.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
             // 
+            // pSide
+            // 
+            this.pSide.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pSide.Location = new System.Drawing.Point(0, 65);
+            this.pSide.Name = "pSide";
+            this.pSide.Size = new System.Drawing.Size(10, 54);
+            this.pSide.TabIndex = 5;
+            // 
+            // pTop
+            // 
+            this.pTop.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pTop.Controls.Add(this.btnExit);
+            this.pTop.Location = new System.Drawing.Point(0, 0);
+            this.pTop.Name = "pTop";
+            this.pTop.Size = new System.Drawing.Size(995, 24);
+            this.pTop.TabIndex = 7;
+            this.pTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
+            this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
+            this.pTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::StekloMaster.Properties.Resources.artplast;
@@ -77,14 +97,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
-            // 
-            // pSide
-            // 
-            this.pSide.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pSide.Location = new System.Drawing.Point(0, 65);
-            this.pSide.Name = "pSide";
-            this.pSide.Size = new System.Drawing.Size(10, 54);
-            this.pSide.TabIndex = 5;
             // 
             // button7
             // 
@@ -99,7 +111,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(192, 54);
             this.button7.TabIndex = 6;
-            this.button7.Text = "       Support";
+            this.button7.Text = "       FAQ";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
             // 
@@ -116,7 +128,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(192, 54);
             this.button6.TabIndex = 7;
-            this.button6.Text = "       Account";
+            this.button6.Text = "       ";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
             // 
@@ -133,7 +145,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(192, 54);
             this.button5.TabIndex = 8;
-            this.button5.Text = "       Delivery";
+            this.button5.Text = "       User";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
             // 
@@ -150,7 +162,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(192, 54);
             this.button4.TabIndex = 9;
-            this.button4.Text = "       Database";
+            this.button4.Text = "       Edit Database";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
             // 
@@ -219,18 +231,6 @@
             this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
             this.pTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
             // 
-            // pTop
-            // 
-            this.pTop.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pTop.Controls.Add(this.btnExit);
-            this.pTop.Location = new System.Drawing.Point(0, 0);
-            this.pTop.Name = "pTop";
-            this.pTop.Size = new System.Drawing.Size(995, 24);
-            this.pTop.TabIndex = 7;
-            this.pTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
-            this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
-            this.pTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
-            // 
             // btnExit
             // 
             this.btnExit.BackgroundImage = global::StekloMaster.Properties.Resources.close;
@@ -281,8 +281,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pTop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
