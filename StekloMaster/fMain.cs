@@ -34,7 +34,7 @@ namespace StekloMaster
         {
             pageHome.Visible = false;
             pageOrder.Visible = false;
-
+            pageMaterials.Visible = false;
         }
         private void MoveSidePointer(Button btn)
         {
@@ -55,7 +55,12 @@ namespace StekloMaster
             pageOrder.Visible = true;
         }
 
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            HidePages();
+            MoveSidePointer((Button)sender);
+            pageMaterials.Visible = true;
+        }
 
 
 

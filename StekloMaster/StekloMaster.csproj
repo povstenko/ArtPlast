@@ -91,6 +91,12 @@
     <Compile Include="PageHome.designer.cs">
       <DependentUpon>PageHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="PageMaterials.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageMaterials.Designer.cs">
+      <DependentUpon>PageMaterials.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PageHome.resx">
       <DependentUpon>PageHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageMaterials.resx">
+      <DependentUpon>PageMaterials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageOrder.resx">
       <DependentUpon>PageOrder.cs</DependentUpon>

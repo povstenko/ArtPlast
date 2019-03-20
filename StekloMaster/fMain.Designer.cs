@@ -43,6 +43,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.pageOrder = new StekloMaster.PageOrder();
             this.pageHome = new StekloMaster.PageHome();
+            this.pageMaterials = new StekloMaster.PageMaterials();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pTop.SuspendLayout();
@@ -170,6 +171,7 @@
             this.button3.Text = "       Materials";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -254,6 +256,14 @@
             this.pageHome.Size = new System.Drawing.Size(788, 528);
             this.pageHome.TabIndex = 10;
             // 
+            // pageMaterials
+            // 
+            this.pageMaterials.BackColor = System.Drawing.Color.White;
+            this.pageMaterials.Location = new System.Drawing.Point(204, 24);
+            this.pageMaterials.Name = "pageMaterials";
+            this.pageMaterials.Size = new System.Drawing.Size(788, 528);
+            this.pageMaterials.TabIndex = 10;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,6 +273,7 @@
             this.Controls.Add(this.pMenu);
             this.Controls.Add(this.pTop);
             this.Controls.Add(this.pageOrder);
+            this.Controls.Add(this.pageMaterials);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMain";
@@ -291,6 +302,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private PageHome pageHome;
         private PageOrder pageOrder;
+        private PageMaterials pageMaterials;
        // private PageHome pageHome1;
     }
 }

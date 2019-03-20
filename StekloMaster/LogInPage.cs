@@ -54,7 +54,7 @@ namespace StekloMaster
             try
             {
                 await sqlConnect.OpenAsync();
-                SqlDataAdapter sda = new SqlDataAdapter("Select Count (*) From [User] where [Login] = '" + tbxLogin.Text + "' and [Password] = '" + tbxPassword.Text + "'", sqlConnect);
+                SqlDataAdapter sda = new SqlDataAdapter($"Select Count (*) From [User] where [Login] = '{tbxLogin.Text}' and [Password] = '{tbxPassword.Text }'", sqlConnect);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 if (Convert.ToInt32(dt.Rows[0][0]) == 1)
@@ -82,7 +82,6 @@ namespace StekloMaster
                     sqlConnect.Close();
                 }
             }
-            
         }
 
 
