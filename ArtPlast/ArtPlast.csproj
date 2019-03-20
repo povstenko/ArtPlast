@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{05EA8529-9050-4F22-8364-11F64EC74DCE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>StekloMaster</RootNamespace>
-    <AssemblyName>StekloMaster</AssemblyName>
+    <RootNamespace>ArtPlast</RootNamespace>
+    <AssemblyName>ArtPlast</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,6 +45,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -143,6 +146,7 @@
     <None Include="artplast.png" />
     <None Include="artplast_bg.png" />
     <None Include="close.png" />
+    <Content Include="icon.ico" />
     <Content Include="WindowShop.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
