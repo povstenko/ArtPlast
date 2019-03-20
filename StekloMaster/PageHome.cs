@@ -26,11 +26,10 @@ namespace StekloMaster
             imgs.Add(@"img\4.jpg");
 
             cntr = 1;
-
-            pbGallery.Image = Image.FromFile(imgs[0]);
         }
         private void PageHome_Load(object sender, EventArgs e)
         {
+            //pbGallery.Image = Image.FromFile(imgs[1]);
             timer.Start();
         }
 

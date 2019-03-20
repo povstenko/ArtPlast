@@ -161,6 +161,7 @@
     <None Include="artplast.png" />
     <None Include="artplast_bg.png" />
     <None Include="close.png" />
+    <None Include="bin\Debug\img\1.jpg" />
     <Content Include="WindowShop.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

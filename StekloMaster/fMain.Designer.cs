@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.pMenu = new System.Windows.Forms.Panel();
             this.pSide = new System.Windows.Forms.Panel();
-            this.pTop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -40,12 +39,13 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pTop = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.pageHome = new StekloMaster.PageHome();
             this.pageOrder = new StekloMaster.PageOrder();
+            this.pageHome = new StekloMaster.PageHome();
             this.pMenu.SuspendLayout();
-            this.pTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pMenu
@@ -75,18 +75,6 @@
             this.pSide.Name = "pSide";
             this.pSide.Size = new System.Drawing.Size(10, 54);
             this.pSide.TabIndex = 5;
-            // 
-            // pTop
-            // 
-            this.pTop.BackColor = System.Drawing.Color.DodgerBlue;
-            this.pTop.Controls.Add(this.btnExit);
-            this.pTop.Location = new System.Drawing.Point(0, 0);
-            this.pTop.Name = "pTop";
-            this.pTop.Size = new System.Drawing.Size(995, 24);
-            this.pTop.TabIndex = 7;
-            this.pTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseDown);
-            this.pTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseMove);
-            this.pTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pTop_MouseUp);
             // 
             // pictureBox1
             // 
@@ -250,14 +238,6 @@
             this.btnExit.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
             this.btnExit.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             // 
-            // pageHome
-            // 
-            this.pageHome.BackColor = System.Drawing.Color.White;
-            this.pageHome.Location = new System.Drawing.Point(206, 26);
-            this.pageHome.Name = "pageHome";
-            this.pageHome.Size = new System.Drawing.Size(788, 528);
-            this.pageHome.TabIndex = 8;
-            // 
             // pageOrder
             // 
             this.pageOrder.BackColor = System.Drawing.Color.White;
@@ -266,14 +246,22 @@
             this.pageOrder.Size = new System.Drawing.Size(788, 528);
             this.pageOrder.TabIndex = 9;
             // 
+            // pageHome
+            // 
+            this.pageHome.BackColor = System.Drawing.Color.White;
+            this.pageHome.Location = new System.Drawing.Point(204, 24);
+            this.pageHome.Name = "pageHome";
+            this.pageHome.Size = new System.Drawing.Size(788, 528);
+            this.pageHome.TabIndex = 10;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 554);
+            this.Controls.Add(this.pageHome);
             this.Controls.Add(this.pMenu);
             this.Controls.Add(this.pTop);
-            this.Controls.Add(this.pageHome);
             this.Controls.Add(this.pageOrder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -281,8 +269,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.pMenu.ResumeLayout(false);
-            this.pTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pTop.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -303,6 +291,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private PageHome pageHome;
         private PageOrder pageOrder;
+       // private PageHome pageHome1;
     }
 }
 

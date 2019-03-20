@@ -66,6 +66,7 @@
             // 
             this.pbGallery.BackColor = System.Drawing.Color.Silver;
             this.pbGallery.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbGallery.Image = global::StekloMaster.Properties.Resources._1;
             this.pbGallery.Location = new System.Drawing.Point(48, 51);
             this.pbGallery.Name = "pbGallery";
             this.pbGallery.Size = new System.Drawing.Size(695, 200);
