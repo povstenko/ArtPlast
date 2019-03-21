@@ -92,7 +92,11 @@
             this.dgwFurniture.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwFurniture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFurniture.Location = new System.Drawing.Point(0, 0);
+            this.dgwFurniture.MultiSelect = false;
             this.dgwFurniture.Name = "dgwFurniture";
+            this.dgwFurniture.ReadOnly = true;
+            this.dgwFurniture.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgwFurniture.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFurniture.Size = new System.Drawing.Size(322, 100);
             this.dgwFurniture.TabIndex = 23;
             // 
@@ -115,7 +119,11 @@
             this.dgwGlass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwGlass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwGlass.Location = new System.Drawing.Point(0, 0);
+            this.dgwGlass.MultiSelect = false;
             this.dgwGlass.Name = "dgwGlass";
+            this.dgwGlass.ReadOnly = true;
+            this.dgwGlass.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgwGlass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwGlass.Size = new System.Drawing.Size(322, 100);
             this.dgwGlass.TabIndex = 23;
             // 
@@ -138,7 +146,11 @@
             this.dgwFrame.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwFrame.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFrame.Location = new System.Drawing.Point(0, 0);
+            this.dgwFrame.MultiSelect = false;
             this.dgwFrame.Name = "dgwFrame";
+            this.dgwFrame.ReadOnly = true;
+            this.dgwFrame.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgwFrame.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFrame.Size = new System.Drawing.Size(322, 100);
             this.dgwFrame.TabIndex = 22;
             // 
@@ -339,7 +351,11 @@
             this.dgwCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCart.Location = new System.Drawing.Point(361, 56);
+            this.dgwCart.MultiSelect = false;
             this.dgwCart.Name = "dgwCart";
+            this.dgwCart.ReadOnly = true;
+            this.dgwCart.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgwCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwCart.Size = new System.Drawing.Size(410, 304);
             this.dgwCart.TabIndex = 21;
             // 
@@ -367,6 +383,7 @@
             this.Controls.Add(this.label5);
             this.Name = "PageOrder";
             this.Size = new System.Drawing.Size(788, 528);
+            this.Load += new System.EventHandler(this.PageOrder_Load);
             this.p3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgwFurniture)).EndInit();
             this.p2.ResumeLayout(false);

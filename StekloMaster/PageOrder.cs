@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace StekloMaster
 {
@@ -15,13 +17,38 @@ namespace StekloMaster
         const int OFFSET = 10;
         Image IMG_COLLAPSE = global::StekloMaster.Properties.Resources.collapse_arrow_24;
         Image IMG_EXPAND = global::StekloMaster.Properties.Resources.expand_arrow_24;
-    
+
+
+        SqlConnectionStringBuilder strbuilder = null;
+        SqlConnection sqlConnect = null;
+        SqlDataReader reader = null;
+        SqlCommand cmd = null;
+        string DIR_PATH = Directory.GetCurrentDirectory() + "..\\..\\..\\";
+
         public PageOrder()
         {
             InitializeComponent();
             InitializeExpandMenu();
             InitializeDataGridView();
+
+            strbuilder = new SqlConnectionStringBuilder();
+            strbuilder.DataSource = @"(LocalDB)\MSSQLLocalDB";
+            strbuilder.InitialCatalog = "WindowShop";
+            strbuilder.IntegratedSecurity = true;
+
+            strbuilder.AttachDBFilename = GetDatabaseURL("WindowShop.mdf");
+            sqlConnect = new SqlConnection(strbuilder.ConnectionString);
         }
+        private void PageOrder_Load(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+        private string GetDatabaseURL(string databasename)
+        {
+            return $"{DIR_PATH}\\{databasename}";
+        }
+
+
         private void InitializeDataGridView()
         {
             var column1 = new DataGridViewColumn();
@@ -151,16 +178,57 @@ namespace StekloMaster
             dgwFurniture.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
         }
 
-        private void CheckExpandMenuSpace()
+        private async void RefreshData()
         {
-            if (((int)b1.Tag + (int)b2.Tag + (int)b3.Tag) >= 2)
+            sqlConnect.Close();
+            try
             {
-                pSize.Visible = false;
+                await sqlConnect.OpenAsync();
+                cmd = new SqlCommand($"SELECT*FROM [Materials] WHERE [Category] = 'Frame' ORDER BY [Name],[CostPerMeter]", sqlConnect);
+                reader = await cmd.ExecuteReaderAsync();
+                dgwFrame.Rows.Clear();
+                while (await reader.ReadAsync())
+                {
+                    dgwFrame.Rows.Add(reader["Name"], reader["Color"], reader["CostPerMeter"]);
+                }
+
+                reader.Close();
+                cmd = new SqlCommand($"SELECT*FROM [Materials] WHERE [Category] = 'Glass' ORDER BY [Name],[CostPerMeter]", sqlConnect);
+                reader = await cmd.ExecuteReaderAsync();
+                dgwGlass.Rows.Clear();
+                while (await reader.ReadAsync())
+                {
+                    dgwGlass.Rows.Add(reader["Name"], reader["Color"], reader["CostPerMeter"]);
+                }
+                //cmd = new SqlCommand($"SELECT*FROM [Materials] WHERE [Category] = 'Sill' OR [Category] = 'Furniture' OR [Category] = 'Section' ORDER BY [Category]", sqlConnect);
+                reader.Close();
+                cmd = new SqlCommand($"SELECT*FROM [Materials] WHERE [Category] = 'Sill' OR [Category] = 'Furniture' OR [Category] = 'Section' ORDER BY [Category],[Name],[Color]", sqlConnect);
+                reader = await cmd.ExecuteReaderAsync();
+                dgwFurniture.Rows.Clear();
+                while (await reader.ReadAsync())
+                {
+                    dgwFurniture.Rows.Add(reader["Category"], reader["Name"], reader["Color"], reader["CostPerMeter"]);
+                }
             }
-            else
-                pSize.Visible = true;
+            catch (Exception ex)
+            {
+                //if(ex.Message != "Отменена задача.")
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (reader != null)
+                {
+                    reader.Close();
+                }
+                else if (sqlConnect != null)
+                {
+                    sqlConnect.Close();
+                }
+            }
         }
 
+        
         // ExpandMenu
         private void InitializeExpandMenu()
         {
@@ -183,6 +251,15 @@ namespace StekloMaster
             b3.Top = b2.Bottom + OFFSET;
 
             CheckExpandMenuSpace();
+        }
+        private void CheckExpandMenuSpace()
+        {
+            if (((int)b1.Tag + (int)b2.Tag + (int)b3.Tag) >= 2)
+            {
+                pSize.Visible = false;
+            }
+            else
+                pSize.Visible = true;
         }
         private void ExpandMenu1_Click(object sender, EventArgs e)
         {
@@ -273,5 +350,7 @@ namespace StekloMaster
             }
             CheckExpandMenuSpace();
         }
+
+        
     }
 }
