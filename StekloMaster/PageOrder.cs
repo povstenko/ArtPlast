@@ -200,7 +200,7 @@ namespace StekloMaster
                 {
                     dgwGlass.Rows.Add(reader["Name"], reader["Color"], reader["CostPerMeter"]);
                 }
-                //cmd = new SqlCommand($"SELECT*FROM [Materials] WHERE [Category] = 'Sill' OR [Category] = 'Furniture' OR [Category] = 'Section' ORDER BY [Category]", sqlConnect);
+
                 reader.Close();
                 cmd = new SqlCommand($"SELECT*FROM [Materials] WHERE [Category] = 'Sill' OR [Category] = 'Furniture' OR [Category] = 'Section' ORDER BY [Category],[Name],[Color]", sqlConnect);
                 reader = await cmd.ExecuteReaderAsync();
@@ -212,7 +212,6 @@ namespace StekloMaster
             }
             catch (Exception ex)
             {
-                //if(ex.Message != "Отменена задача.")
                 MessageBox.Show(ex.Message);
             }
             finally

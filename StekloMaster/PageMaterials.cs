@@ -21,6 +21,7 @@ namespace StekloMaster
         string DIR_PATH = Directory.GetCurrentDirectory() + "..\\..\\..\\";
 
         List<string> infos;
+        bool isAsc;
 
         public PageMaterials()
         {
@@ -39,6 +40,7 @@ namespace StekloMaster
             cmbxOrder.SelectedIndex = 0;
 
             infos = new List<string>();
+            isAsc = true;
         }
         private void PageMaterials_Load(object sender, EventArgs e)
         {
@@ -90,11 +92,17 @@ namespace StekloMaster
             sqlConnect.Close();
             try
             {
+                string asc = "";
+                if (isAsc)
+                    asc = "ASC";
+                else
+                    asc = "DESC";
+
                 await sqlConnect.OpenAsync();
                 if (order != null)
-                    cmd = new SqlCommand($"SELECT*FROM [Materials] ORDER BY [{order}]", sqlConnect);
+                    cmd = new SqlCommand($"SELECT*FROM [Materials] ORDER BY [{order}] {asc}", sqlConnect);
                 else
-                    cmd = new SqlCommand($"SELECT*FROM [Materials] ORDER BY [Category]", sqlConnect);
+                    cmd = new SqlCommand($"SELECT*FROM [Materials] ORDER BY [Category] {asc}", sqlConnect);
                 reader = await cmd.ExecuteReaderAsync();
                 dgwMaterials.Rows.Clear();
                 infos.Clear();
@@ -174,6 +182,30 @@ namespace StekloMaster
             if (dgwMaterials.CurrentCell.RowIndex != -1)
             {
                 rtbxInfo.Text = infos[dgwMaterials.CurrentCell.RowIndex];
+            }
+        }
+
+        private void btnAsc_Click(object sender, EventArgs e)
+        {
+            if(btnAsc.BackColor == Color.WhiteSmoke)
+            {
+                btnAsc.BackColor = Color.DodgerBlue;
+                btnDesc.BackColor = Color.WhiteSmoke;
+
+                isAsc = true;
+                RefreshData(null);
+            }
+        }
+
+        private void btnDesc_Click(object sender, EventArgs e)
+        {
+            if (btnDesc.BackColor == Color.WhiteSmoke)
+            {
+                btnDesc.BackColor = Color.DodgerBlue;
+                btnAsc.BackColor = Color.WhiteSmoke;
+
+                isAsc = false;
+                RefreshData(null);
             }
         }
     }

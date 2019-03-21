@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cmbxOrder = new System.Windows.Forms.ComboBox();
             this.rtbxInfo = new System.Windows.Forms.RichTextBox();
+            this.btnAsc = new System.Windows.Forms.Button();
+            this.btnDesc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMaterials)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,7 +130,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(746, 38);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(28, 23);
+            this.btnSearch.Size = new System.Drawing.Size(24, 24);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "S";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -174,11 +176,47 @@
             this.rtbxInfo.TabIndex = 15;
             this.rtbxInfo.Text = "";
             // 
+            // btnAsc
+            // 
+            this.btnAsc.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAsc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsc.FlatAppearance.BorderSize = 0;
+            this.btnAsc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsc.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAsc.ForeColor = System.Drawing.Color.White;
+            this.btnAsc.Location = new System.Drawing.Point(574, 178);
+            this.btnAsc.Name = "btnAsc";
+            this.btnAsc.Size = new System.Drawing.Size(36, 36);
+            this.btnAsc.TabIndex = 16;
+            this.btnAsc.Tag = "ASC";
+            this.btnAsc.Text = "ASC";
+            this.btnAsc.UseVisualStyleBackColor = false;
+            this.btnAsc.Click += new System.EventHandler(this.btnAsc_Click);
+            // 
+            // btnDesc
+            // 
+            this.btnDesc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDesc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDesc.FlatAppearance.BorderSize = 0;
+            this.btnDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesc.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDesc.ForeColor = System.Drawing.Color.Black;
+            this.btnDesc.Location = new System.Drawing.Point(616, 178);
+            this.btnDesc.Name = "btnDesc";
+            this.btnDesc.Size = new System.Drawing.Size(36, 36);
+            this.btnDesc.TabIndex = 17;
+            this.btnDesc.Tag = "DESC";
+            this.btnDesc.Text = "DES";
+            this.btnDesc.UseVisualStyleBackColor = false;
+            this.btnDesc.Click += new System.EventHandler(this.btnDesc_Click);
+            // 
             // PageMaterials
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnDesc);
+            this.Controls.Add(this.btnAsc);
             this.Controls.Add(this.rtbxInfo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbxOrder);
@@ -210,5 +248,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbxOrder;
         private System.Windows.Forms.RichTextBox rtbxInfo;
+        private System.Windows.Forms.Button btnAsc;
+        private System.Windows.Forms.Button btnDesc;
     }
 }
