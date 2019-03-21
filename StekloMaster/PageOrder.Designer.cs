@@ -153,6 +153,7 @@
             this.dgwFrame.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFrame.Size = new System.Drawing.Size(322, 100);
             this.dgwFrame.TabIndex = 22;
+            this.dgwFrame.DoubleClick += new System.EventHandler(this.dgwFrame_Click);
             // 
             // b3
             // 

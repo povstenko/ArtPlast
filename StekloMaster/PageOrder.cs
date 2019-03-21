@@ -18,6 +18,8 @@ namespace StekloMaster
         Image IMG_COLLAPSE = global::StekloMaster.Properties.Resources.collapse_arrow_24;
         Image IMG_EXPAND = global::StekloMaster.Properties.Resources.expand_arrow_24;
 
+        List<Material> materials;
+        List<Material> cart;
 
         SqlConnectionStringBuilder strbuilder = null;
         SqlConnection sqlConnect = null;
@@ -30,6 +32,9 @@ namespace StekloMaster
             InitializeComponent();
             InitializeExpandMenu();
             InitializeDataGridView();
+
+            materials = new List<Material>();
+            cart = new List<Material>();
 
             strbuilder = new SqlConnectionStringBuilder();
             strbuilder.DataSource = @"(LocalDB)\MSSQLLocalDB";
@@ -183,6 +188,7 @@ namespace StekloMaster
             sqlConnect.Close();
             try
             {
+                // add to Frame
                 await sqlConnect.OpenAsync();
                 cmd = new SqlCommand($"SELECT*FROM [Materials] WHERE [Category] = 'Frame' ORDER BY [Name],[CostPerMeter]", sqlConnect);
                 reader = await cmd.ExecuteReaderAsync();
@@ -192,6 +198,7 @@ namespace StekloMaster
                     dgwFrame.Rows.Add(reader["Name"], reader["Color"], reader["CostPerMeter"]);
                 }
 
+                // add to Glass
                 reader.Close();
                 cmd = new SqlCommand($"SELECT*FROM [Materials] WHERE [Category] = 'Glass' ORDER BY [Name],[CostPerMeter]", sqlConnect);
                 reader = await cmd.ExecuteReaderAsync();
@@ -201,6 +208,7 @@ namespace StekloMaster
                     dgwGlass.Rows.Add(reader["Name"], reader["Color"], reader["CostPerMeter"]);
                 }
 
+                // add to Furniture
                 reader.Close();
                 cmd = new SqlCommand($"SELECT*FROM [Materials] WHERE [Category] = 'Sill' OR [Category] = 'Furniture' OR [Category] = 'Section' ORDER BY [Category],[Name],[Color]", sqlConnect);
                 reader = await cmd.ExecuteReaderAsync();
@@ -208,6 +216,22 @@ namespace StekloMaster
                 while (await reader.ReadAsync())
                 {
                     dgwFurniture.Rows.Add(reader["Category"], reader["Name"], reader["Color"], reader["CostPerMeter"]);
+                }
+
+                // add to list from database
+                reader.Close();
+                cmd = new SqlCommand($"SELECT*FROM [Materials]", sqlConnect);
+                reader = await cmd.ExecuteReaderAsync();
+                materials.Clear();
+                while (await reader.ReadAsync())
+                {
+                    Material m = new Material(Convert.ToInt32(reader["Id"]),
+                        (string)reader["Category"],
+                        (string)reader["Name"],
+                        (string)reader["Color"],
+                        Convert.ToInt32(reader["CostPerMeter"]),
+                        (string)reader["Description"]);
+                    materials.Add(m);
                 }
             }
             catch (Exception ex)
@@ -227,7 +251,38 @@ namespace StekloMaster
             }
         }
 
-        
+        private void AddToCart(string cat, string n, string col, string cost)
+        {
+            foreach (Material item in materials)
+            {
+                if(item.Category == cat &&
+                    item.Name == n &&
+                    item.Color == col &&
+                    item.CostPerMeter == Convert.ToInt32(cost))
+                {
+                    cart.Add(item);
+                    dgwCart.Rows.Clear();
+                    foreach (Material i in cart)
+                    {
+                        dgwCart.Rows.Add(i.Category, i.Name, i.Color, i.CostPerMeter);
+                    }
+                }
+            }
+;        }
+        private void RemoveFromCart(string cat, string n, string col, string cost)
+        {
+            Material m = null;
+
+            cart.Remove(m);
+
+            dgwCart.Rows.Clear();
+            foreach (Material item in cart)
+            {
+                dgwCart.Rows.Add(item.Category, item.Name, item.Color, item.CostPerMeter);
+            }
+        }
+
+
         // ExpandMenu
         private void InitializeExpandMenu()
         {
@@ -350,6 +405,23 @@ namespace StekloMaster
             CheckExpandMenuSpace();
         }
 
-        
+        private void dgwFrame_Click(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+            int index;
+            DataGridViewCellCollection cells;
+
+            if (me.Button == System.Windows.Forms.MouseButtons.Left) {
+                index = dgwFrame.CurrentRow.Index;
+                cells = dgwFrame.CurrentRow.Cells;
+
+                string name = cells[0].Value.ToString();
+                string color = cells[1].Value.ToString();
+                string cost = cells[2].Value.ToString();
+
+                //MessageBox.Show(name+ color+ cost);
+                AddToCart("Frame", name, color, cost);
+            }
+        }
     }
 }
