@@ -20,6 +20,135 @@ namespace StekloMaster
         {
             InitializeComponent();
             InitializeExpandMenu();
+            InitializeDataGridView();
+        }
+        private void InitializeDataGridView()
+        {
+            var column1 = new DataGridViewColumn();
+            column1.HeaderText = "Category"; //текст в шапке
+            //column1.Width = 100; //ширина колонки
+            column1.ReadOnly = true; //значение в этой колонке нельзя править
+            column1.Name = "category"; //текстовое имя колонки, его можно использовать вместо обращений по индексу
+            column1.Frozen = true; //флаг, что данная колонка всегда отображается на своем месте
+            column1.CellTemplate = new DataGridViewTextBoxCell(); //тип нашей колонки
+
+            var column2 = new DataGridViewColumn();
+            column2.HeaderText = "Name";
+            //column2.Width = 150;
+            column2.Name = "name";
+            column2.CellTemplate = new DataGridViewTextBoxCell();
+
+            var column3 = new DataGridViewColumn();
+            column3.HeaderText = "Color";
+            //column3.Width = 93;
+            column3.Name = "color";
+            column3.CellTemplate = new DataGridViewTextBoxCell();
+
+            var column4 = new DataGridViewColumn();
+            column4.HeaderText = "Cost";
+            column4.Width = 67; //ширина колонки
+            column4.Name = "Cost";
+            column4.CellTemplate = new DataGridViewTextBoxCell();
+
+            dgwCart.Columns.Add(column1);
+            dgwCart.Columns.Add(column2);
+            dgwCart.Columns.Add(column3);
+            dgwCart.Columns.Add(column4);
+            dgwCart.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
+
+
+
+
+
+
+            var column6 = new DataGridViewColumn();
+            column6.HeaderText = "Name";
+            //column6.Width = 150;
+            column6.Name = "name";
+            column6.CellTemplate = new DataGridViewTextBoxCell();
+
+            var column7 = new DataGridViewColumn();
+            column7.HeaderText = "Color";
+            //column7.Width = 93;
+            column7.Name = "color";
+            column7.CellTemplate = new DataGridViewTextBoxCell();
+
+            var column8 = new DataGridViewColumn();
+            column8.HeaderText = "Cost";
+            column8.Width = 80; //ширина колонки
+            column8.Name = "Cost";
+            column8.CellTemplate = new DataGridViewTextBoxCell();
+
+            //dgwFrame.Columns.Add(column5);
+            dgwFrame.Columns.Add(column6);
+            dgwFrame.Columns.Add(column7);
+            dgwFrame.Columns.Add(column8);
+            dgwFrame.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
+
+
+
+
+
+
+            var column10 = new DataGridViewColumn();
+            column10.HeaderText = "Name";
+            //column10.Width = 150;
+            column10.Name = "name";
+            column10.CellTemplate = new DataGridViewTextBoxCell();
+
+            var column11 = new DataGridViewColumn();
+            column11.HeaderText = "Color";
+            //column11.Width = 93;
+            column11.Name = "color";
+            column11.CellTemplate = new DataGridViewTextBoxCell();
+
+            var column12 = new DataGridViewColumn();
+            column12.HeaderText = "Cost";
+            column12.Width = 80; //ширина колонки
+            column12.Name = "Cost";
+            column12.CellTemplate = new DataGridViewTextBoxCell();
+
+            //dgwGlass.Columns.Add(column9);
+            dgwGlass.Columns.Add(column10);
+            dgwGlass.Columns.Add(column11);
+            dgwGlass.Columns.Add(column12);
+            dgwGlass.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
+
+
+
+
+
+            var column13 = new DataGridViewColumn();
+            column13.HeaderText = "Category"; //текст в шапке
+            column13.Width = 70; //ширина колонки
+            column13.ReadOnly = true; //значение в этой колонке нельзя править
+            column13.Name = "category"; //текстовое имя колонки, его можно использовать вместо обращений по индексу
+            column13.Frozen = true; //флаг, что данная колонка всегда отображается на своем месте
+            column13.CellTemplate = new DataGridViewTextBoxCell(); //тип нашей колонки
+
+            var column14 = new DataGridViewColumn();
+            column14.HeaderText = "Name";
+            //column14.Width = 150;
+            column14.Name = "name";
+            column14.CellTemplate = new DataGridViewTextBoxCell();
+
+            var column15 = new DataGridViewColumn();
+            column15.HeaderText = "Color";
+            column15.Width = 60;
+            column15.Name = "color";
+            column15.CellTemplate = new DataGridViewTextBoxCell();
+
+            var column16 = new DataGridViewColumn();
+            column16.HeaderText = "Cost";
+            column16.Width = 50; //ширина колонки
+            column16.Name = "Cost";
+            column16.CellTemplate = new DataGridViewTextBoxCell();
+
+            dgwFurniture.Columns.Add(column13);
+            dgwFurniture.Columns.Add(column14);
+            dgwFurniture.Columns.Add(column15);
+            dgwFurniture.Columns.Add(column16);
+            dgwFurniture.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
         }
 
         private void CheckExpandMenuSpace()

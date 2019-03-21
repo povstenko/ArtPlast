@@ -31,8 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageOrder));
             this.label2 = new System.Windows.Forms.Label();
             this.p3 = new System.Windows.Forms.Panel();
+            this.dgwFurniture = new System.Windows.Forms.DataGridView();
             this.p2 = new System.Windows.Forms.Panel();
+            this.dgwGlass = new System.Windows.Forms.DataGridView();
             this.p1 = new System.Windows.Forms.Panel();
+            this.dgwFrame = new System.Windows.Forms.DataGridView();
             this.b3 = new System.Windows.Forms.Button();
             this.b2 = new System.Windows.Forms.Button();
             this.b1 = new System.Windows.Forms.Button();
@@ -49,17 +52,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgwCart = new System.Windows.Forms.DataGridView();
-            this.dgwFrame = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.p3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwFurniture)).BeginInit();
             this.p2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwGlass)).BeginInit();
             this.p1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwFrame)).BeginInit();
             this.pSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwFrame)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -76,22 +76,48 @@
             // p3
             // 
             this.p3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.p3.Controls.Add(this.dataGridView2);
+            this.p3.Controls.Add(this.dgwFurniture);
             this.p3.Location = new System.Drawing.Point(15, 355);
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(322, 100);
             this.p3.TabIndex = 11;
             this.p3.Visible = false;
             // 
+            // dgwFurniture
+            // 
+            this.dgwFurniture.AllowUserToAddRows = false;
+            this.dgwFurniture.AllowUserToDeleteRows = false;
+            this.dgwFurniture.AllowUserToResizeColumns = false;
+            this.dgwFurniture.AllowUserToResizeRows = false;
+            this.dgwFurniture.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgwFurniture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwFurniture.Location = new System.Drawing.Point(0, 0);
+            this.dgwFurniture.Name = "dgwFurniture";
+            this.dgwFurniture.Size = new System.Drawing.Size(322, 100);
+            this.dgwFurniture.TabIndex = 23;
+            // 
             // p2
             // 
             this.p2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.p2.Controls.Add(this.dataGridView1);
+            this.p2.Controls.Add(this.dgwGlass);
             this.p2.Location = new System.Drawing.Point(15, 220);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(322, 100);
             this.p2.TabIndex = 10;
             this.p2.Visible = false;
+            // 
+            // dgwGlass
+            // 
+            this.dgwGlass.AllowUserToAddRows = false;
+            this.dgwGlass.AllowUserToDeleteRows = false;
+            this.dgwGlass.AllowUserToResizeColumns = false;
+            this.dgwGlass.AllowUserToResizeRows = false;
+            this.dgwGlass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgwGlass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwGlass.Location = new System.Drawing.Point(0, 0);
+            this.dgwGlass.Name = "dgwGlass";
+            this.dgwGlass.Size = new System.Drawing.Size(322, 100);
+            this.dgwGlass.TabIndex = 23;
             // 
             // p1
             // 
@@ -102,6 +128,19 @@
             this.p1.Size = new System.Drawing.Size(322, 100);
             this.p1.TabIndex = 9;
             this.p1.Visible = false;
+            // 
+            // dgwFrame
+            // 
+            this.dgwFrame.AllowUserToAddRows = false;
+            this.dgwFrame.AllowUserToDeleteRows = false;
+            this.dgwFrame.AllowUserToResizeColumns = false;
+            this.dgwFrame.AllowUserToResizeRows = false;
+            this.dgwFrame.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgwFrame.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwFrame.Location = new System.Drawing.Point(0, 0);
+            this.dgwFrame.Name = "dgwFrame";
+            this.dgwFrame.Size = new System.Drawing.Size(322, 100);
+            this.dgwFrame.TabIndex = 22;
             // 
             // b3
             // 
@@ -293,35 +332,16 @@
             // 
             // dgwCart
             // 
+            this.dgwCart.AllowUserToAddRows = false;
+            this.dgwCart.AllowUserToDeleteRows = false;
+            this.dgwCart.AllowUserToResizeColumns = false;
+            this.dgwCart.AllowUserToResizeRows = false;
+            this.dgwCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCart.Location = new System.Drawing.Point(361, 56);
             this.dgwCart.Name = "dgwCart";
             this.dgwCart.Size = new System.Drawing.Size(410, 304);
             this.dgwCart.TabIndex = 21;
-            // 
-            // dgwFrame
-            // 
-            this.dgwFrame.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwFrame.Location = new System.Drawing.Point(3, 3);
-            this.dgwFrame.Name = "dgwFrame";
-            this.dgwFrame.Size = new System.Drawing.Size(316, 94);
-            this.dgwFrame.TabIndex = 22;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(316, 94);
-            this.dataGridView1.TabIndex = 23;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(316, 94);
-            this.dataGridView2.TabIndex = 23;
             // 
             // PageOrder
             // 
@@ -348,14 +368,14 @@
             this.Name = "PageOrder";
             this.Size = new System.Drawing.Size(788, 528);
             this.p3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwFurniture)).EndInit();
             this.p2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwGlass)).EndInit();
             this.p1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwFrame)).EndInit();
             this.pSize.ResumeLayout(false);
             this.pSize.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwFrame)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,8 +402,8 @@
         private System.Windows.Forms.DataGridView dgwCart;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgwFurniture;
+        private System.Windows.Forms.DataGridView dgwGlass;
         private System.Windows.Forms.DataGridView dgwFrame;
     }
 }
