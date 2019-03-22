@@ -279,7 +279,7 @@
             this.panel4.Controls.Add(this.richTextBox1);
             this.panel4.Location = new System.Drawing.Point(32, 783);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(695, 403);
+            this.panel4.Size = new System.Drawing.Size(695, 363);
             this.panel4.TabIndex = 10;
             // 
             // label3
@@ -295,7 +295,7 @@
             // 
             // panel8
             // 
-            this.panel8.Location = new System.Drawing.Point(377, 1192);
+            this.panel8.Location = new System.Drawing.Point(333, 1152);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(88, 36);
             this.panel8.TabIndex = 13;
@@ -329,7 +329,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Silver;
-            this.pictureBox7.BackgroundImage = global::StekloMaster.Properties.Resources.sample4;
+            this.pictureBox7.BackgroundImage = global::StekloMaster.Properties.Resources.sample1;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Location = new System.Drawing.Point(18, 12);
             this.pictureBox7.Name = "pictureBox7";
@@ -401,7 +401,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(18, 18);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(663, 366);
+            this.richTextBox1.Size = new System.Drawing.Size(663, 338);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 

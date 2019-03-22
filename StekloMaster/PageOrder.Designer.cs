@@ -99,6 +99,7 @@
             this.dgwFurniture.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFurniture.Size = new System.Drawing.Size(322, 100);
             this.dgwFurniture.TabIndex = 23;
+            this.dgwFurniture.DoubleClick += new System.EventHandler(this.dgwFurniture_DoubleClick);
             // 
             // p2
             // 
@@ -126,6 +127,7 @@
             this.dgwGlass.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwGlass.Size = new System.Drawing.Size(322, 100);
             this.dgwGlass.TabIndex = 23;
+            this.dgwGlass.DoubleClick += new System.EventHandler(this.dgwGlass_DoubleClick);
             // 
             // p1
             // 
@@ -359,6 +361,7 @@
             this.dgwCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwCart.Size = new System.Drawing.Size(410, 304);
             this.dgwCart.TabIndex = 21;
+            this.dgwCart.DoubleClick += new System.EventHandler(this.dgwCart_DoubleClick);
             // 
             // PageOrder
             // 

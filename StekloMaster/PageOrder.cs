@@ -48,12 +48,8 @@ namespace StekloMaster
         {
             RefreshData();
         }
-        private string GetDatabaseURL(string databasename)
-        {
-            return $"{DIR_PATH}\\{databasename}";
-        }
-
-
+        
+        // Data
         private void InitializeDataGridView()
         {
             var column1 = new DataGridViewColumn();
@@ -182,7 +178,10 @@ namespace StekloMaster
             dgwFurniture.Columns.Add(column16);
             dgwFurniture.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
         }
-
+        private string GetDatabaseURL(string databasename)
+        {
+            return $"{DIR_PATH}\\{databasename}";
+        }
         private async void RefreshData()
         {
             sqlConnect.Close();
@@ -251,10 +250,10 @@ namespace StekloMaster
             }
         }
 
+        // Add/Remove to Cart methods
         private void AddToCart(string cat, string n, string col, string cost)
         {
             foreach (Material item in materials)
-            {
                 if(item.Category == cat &&
                     item.Name == n &&
                     item.Color == col &&
@@ -267,26 +266,91 @@ namespace StekloMaster
                             if (j.Category == cat) buf++;
                     if(buf == 0)
                         cart.Add(item);
-                    buf = 0;
-                    
+                    else MessageBox.Show("You cant add more " + cat +" in your cart.", "Oops...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    //update dataGridView
                     dgwCart.Rows.Clear();
                     foreach (Material i in cart)
-                    {
                         dgwCart.Rows.Add(i.Category, i.Name, i.Color, i.CostPerMeter);
-                    }
                 }
-            }
-;        }
+        }
         private void RemoveFromCart(string cat, string n, string col, string cost)
         {
-            Material m = null;
+            foreach (Material item in materials)
+                if (item.Category == cat &&
+                    item.Name == n &&
+                    item.Color == col &&
+                    item.CostPerMeter == Convert.ToInt32(cost))
+                {
+                    cart.Remove(item);
 
-            cart.Remove(m);
+                    //update dataGridView
+                    dgwCart.Rows.Clear();
+                    foreach (Material i in cart)
+                        dgwCart.Rows.Add(i.Category, i.Name, i.Color, i.CostPerMeter);
+                }
+        }
+        // Add/Remove to Cart
+        private void dgwFrame_Click(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
 
-            dgwCart.Rows.Clear();
-            foreach (Material item in cart)
+            if (me.Button == MouseButtons.Left && dgwFrame.CurrentCell != null)
             {
-                dgwCart.Rows.Add(item.Category, item.Name, item.Color, item.CostPerMeter);
+                DataGridViewCellCollection cells = dgwFrame.CurrentRow.Cells;
+
+                string name = cells[0].Value.ToString();
+                string color = cells[1].Value.ToString();
+                string cost = cells[2].Value.ToString();
+
+                AddToCart("Frame", name, color, cost);
+            }
+        }
+        private void dgwGlass_DoubleClick(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+
+            if (me.Button == MouseButtons.Left && dgwGlass.CurrentCell != null)
+            {
+                DataGridViewCellCollection cells = dgwGlass.CurrentRow.Cells;
+
+                string name = cells[0].Value.ToString();
+                string color = cells[1].Value.ToString();
+                string cost = cells[2].Value.ToString();
+
+                AddToCart("Glass", name, color, cost);
+            }
+        }
+        private void dgwFurniture_DoubleClick(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+
+            if (me.Button == MouseButtons.Left && dgwFurniture.CurrentCell != null)
+            {
+                DataGridViewCellCollection cells = dgwFurniture.CurrentRow.Cells;
+
+                string category = cells[0].Value.ToString();
+                string name = cells[1].Value.ToString();
+                string color = cells[2].Value.ToString();
+                string cost = cells[3].Value.ToString();
+
+                AddToCart(category, name, color, cost);
+            }
+        }
+        private void dgwCart_DoubleClick(object sender, EventArgs e)
+        {
+            MouseEventArgs me = (MouseEventArgs)e;
+
+            if (me.Button == MouseButtons.Left && dgwCart.CurrentCell != null)
+            {
+                DataGridViewCellCollection cells = dgwCart.CurrentRow.Cells;
+
+                string category = cells[0].Value.ToString();
+                string name = cells[1].Value.ToString();
+                string color = cells[2].Value.ToString();
+                string cost = cells[3].Value.ToString();
+
+                RemoveFromCart(category, name, color, cost);
             }
         }
 
@@ -411,25 +475,6 @@ namespace StekloMaster
                 b3.Tag = 0;
             }
             CheckExpandMenuSpace();
-        }
-
-        private void dgwFrame_Click(object sender, EventArgs e)
-        {
-            MouseEventArgs me = (MouseEventArgs)e;
-            int index;
-            DataGridViewCellCollection cells;
-
-            if (me.Button == System.Windows.Forms.MouseButtons.Left) {
-                index = dgwFrame.CurrentRow.Index;
-                cells = dgwFrame.CurrentRow.Cells;
-
-                string name = cells[0].Value.ToString();
-                string color = cells[1].Value.ToString();
-                string cost = cells[2].Value.ToString();
-
-                //MessageBox.Show(name+ color+ cost);
-                AddToCart("Frame", name, color, cost);
-            }
         }
     }
 }
