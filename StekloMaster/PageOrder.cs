@@ -260,7 +260,15 @@ namespace StekloMaster
                     item.Color == col &&
                     item.CostPerMeter == Convert.ToInt32(cost))
                 {
-                    cart.Add(item);
+
+                    int buf = 0;
+                    if(cat == "Frame" || cat == "Glass")
+                        foreach (Material j in cart)
+                            if (j.Category == cat) buf++;
+                    if(buf == 0)
+                        cart.Add(item);
+                    buf = 0;
+                    
                     dgwCart.Rows.Clear();
                     foreach (Material i in cart)
                     {

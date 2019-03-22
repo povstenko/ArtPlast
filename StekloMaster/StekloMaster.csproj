@@ -174,6 +174,12 @@
     <None Include="bin\Debug\img\1.jpg" />
     <None Include="collapse-arrow-24.png" />
     <None Include="expand-arrow-24.png" />
+    <None Include="bin\Debug\img\sample1.jpg" />
+    <None Include="bin\Debug\img\sample2.jpg" />
+    <None Include="bin\Debug\img\sample3.jpg" />
+    <None Include="bin\Debug\img\sample4.jpg" />
+    <None Include="bin\Debug\img\sample5.jpg" />
+    <None Include="bin\Debug\img\sample6.jpg" />
     <Content Include="WindowShop.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
