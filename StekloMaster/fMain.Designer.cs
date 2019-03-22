@@ -44,6 +44,7 @@
             this.pageOrder = new StekloMaster.PageOrder();
             this.pageHome = new StekloMaster.PageHome();
             this.pageMaterials = new StekloMaster.PageMaterials();
+            this.pageDatabase = new StekloMaster.PageDatabase();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pTop.SuspendLayout();
@@ -154,6 +155,7 @@
             this.button4.Text = "       Edit Database";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -264,6 +266,14 @@
             this.pageMaterials.Size = new System.Drawing.Size(788, 528);
             this.pageMaterials.TabIndex = 10;
             // 
+            // pageDatabase
+            // 
+            this.pageDatabase.BackColor = System.Drawing.Color.White;
+            this.pageDatabase.Location = new System.Drawing.Point(204, 24);
+            this.pageDatabase.Name = "pageDatabase";
+            this.pageDatabase.Size = new System.Drawing.Size(788, 528);
+            this.pageDatabase.TabIndex = 11;
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,7 +313,7 @@
         private PageHome pageHome;
         private PageOrder pageOrder;
         private PageMaterials pageMaterials;
-       // private PageHome pageHome1;
+        private PageDatabase pageDatabase;
     }
 }
 
