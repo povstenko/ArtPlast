@@ -52,6 +52,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgwCart = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tbxW = new System.Windows.Forms.TextBox();
+            this.tbxH = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tbxFrame = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.p3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFurniture)).BeginInit();
             this.p2.SuspendLayout();
@@ -217,6 +224,13 @@
             // pSize
             // 
             this.pSize.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pSize.Controls.Add(this.panel3);
+            this.pSize.Controls.Add(this.tbxFrame);
+            this.pSize.Controls.Add(this.label10);
+            this.pSize.Controls.Add(this.panel1);
+            this.pSize.Controls.Add(this.panel2);
+            this.pSize.Controls.Add(this.tbxW);
+            this.pSize.Controls.Add(this.tbxH);
             this.pSize.Controls.Add(this.label9);
             this.pSize.Controls.Add(this.label8);
             this.pSize.Controls.Add(this.label1);
@@ -224,12 +238,13 @@
             this.pSize.Name = "pSize";
             this.pSize.Size = new System.Drawing.Size(322, 148);
             this.pSize.TabIndex = 12;
+            this.pSize.Paint += new System.Windows.Forms.PaintEventHandler(this.pSize_Paint);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(18, 97);
+            this.label9.Location = new System.Drawing.Point(49, 78);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 15);
             this.label9.TabIndex = 18;
@@ -239,7 +254,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(18, 56);
+            this.label8.Location = new System.Drawing.Point(48, 45);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 15);
             this.label8.TabIndex = 17;
@@ -280,9 +295,9 @@
             this.lblFullPrice.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblFullPrice.Location = new System.Drawing.Point(476, 411);
             this.lblFullPrice.Name = "lblFullPrice";
-            this.lblFullPrice.Size = new System.Drawing.Size(78, 33);
+            this.lblFullPrice.Size = new System.Drawing.Size(29, 33);
             this.lblFullPrice.TabIndex = 14;
-            this.lblFullPrice.Text = "43.60";
+            this.lblFullPrice.Text = "0";
             // 
             // lblPrice
             // 
@@ -290,9 +305,9 @@
             this.lblPrice.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblPrice.Location = new System.Drawing.Point(478, 463);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(55, 23);
+            this.lblPrice.Size = new System.Drawing.Size(20, 23);
             this.lblPrice.TabIndex = 15;
-            this.lblPrice.Text = "39.70";
+            this.lblPrice.Text = "0";
             // 
             // label3
             // 
@@ -363,6 +378,78 @@
             this.dgwCart.TabIndex = 21;
             this.dgwCart.DoubleClick += new System.EventHandler(this.dgwCart_DoubleClick);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SlateGray;
+            this.panel1.Location = new System.Drawing.Point(98, 60);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(44, 1);
+            this.panel1.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SlateGray;
+            this.panel2.Location = new System.Drawing.Point(98, 92);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(44, 1);
+            this.panel2.TabIndex = 21;
+            // 
+            // tbxW
+            // 
+            this.tbxW.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxW.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxW.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxW.Location = new System.Drawing.Point(98, 76);
+            this.tbxW.Name = "tbxW";
+            this.tbxW.Size = new System.Drawing.Size(44, 16);
+            this.tbxW.TabIndex = 20;
+            this.tbxW.Text = "1";
+            this.tbxW.Click += new System.EventHandler(this.tbxW_Click);
+            this.tbxW.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
+            // 
+            // tbxH
+            // 
+            this.tbxH.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxH.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxH.Location = new System.Drawing.Point(98, 44);
+            this.tbxH.Name = "tbxH";
+            this.tbxH.Size = new System.Drawing.Size(44, 16);
+            this.tbxH.TabIndex = 19;
+            this.tbxH.Text = "2";
+            this.tbxH.Click += new System.EventHandler(this.tbxH_Click);
+            this.tbxH.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SlateGray;
+            this.panel3.Location = new System.Drawing.Point(98, 122);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(44, 1);
+            this.panel3.TabIndex = 25;
+            // 
+            // tbxFrame
+            // 
+            this.tbxFrame.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxFrame.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxFrame.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxFrame.Location = new System.Drawing.Point(98, 106);
+            this.tbxFrame.Name = "tbxFrame";
+            this.tbxFrame.Size = new System.Drawing.Size(44, 16);
+            this.tbxFrame.TabIndex = 24;
+            this.tbxFrame.Text = "0,1";
+            this.tbxFrame.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(18, 108);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 15);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Frame width:";
+            // 
             // PageOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,5 +513,12 @@
         private System.Windows.Forms.DataGridView dgwFurniture;
         private System.Windows.Forms.DataGridView dgwGlass;
         private System.Windows.Forms.DataGridView dgwFrame;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox tbxW;
+        private System.Windows.Forms.TextBox tbxH;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox tbxFrame;
+        private System.Windows.Forms.Label label10;
     }
 }

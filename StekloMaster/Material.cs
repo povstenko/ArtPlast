@@ -58,5 +58,10 @@ namespace StekloMaster
             this.cost = cost;
             this.description = description;
         }
+        
+        public override string ToString()
+        {
+            return $"{id} | {category} | {name} | {color} | {cost}";
+        }
     }
 }

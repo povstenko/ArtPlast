@@ -48,7 +48,70 @@ namespace StekloMaster
         {
             RefreshData();
         }
-        
+
+
+        // Price
+        private double ComputePrice(Material frame, Material glass, List<Material> furniture)
+        {
+            double frameCost = 0;
+            if(frame != null) frameCost = (double)frame.CostPerMeter;
+
+            double glassCost = 0;
+            if(glass != null) glassCost = (double)glass.CostPerMeter;
+
+            double furnitureCost = 0;
+            if (furniture != null)
+                foreach (Material i in furniture)
+                    furnitureCost += (double)i.CostPerMeter;
+
+            double h = 0.0;
+            double w = 0.0;
+            double c = 0.0;//frame width
+            try
+            {
+                h = Convert.ToDouble(tbxH.Text);
+                w = Convert.ToDouble(tbxW.Text);
+                c = Convert.ToDouble(tbxFrame.Text);
+            }
+            catch(Exception ex) {/*if cant convert*/}
+
+            double formula1 = h*w - 2*h*c - 2*w*c + 4*c*c;// = (h-2c)(w-2c) =
+            double formula2 = h*w - formula1;// = 2c(h + w - 2c).
+
+            return (frameCost * formula2) + (glassCost * formula1) + furnitureCost;
+        }
+        private void UpdatePrice()
+        {
+            if (tbxH.Text != "" && tbxW.Text != "")
+            {
+                Material f = null, g = null;// frame glass
+                List<Material> fs = null;// furnitures
+                bool tmp = false;
+                foreach (Material item in cart)
+                    if (item.Category == "Frame")
+                        f = item;
+                    else if (item.Category == "Glass")
+                        g = item;
+                    else
+                        tmp = true;
+                if (tmp)
+                {
+                    fs = new List<Material>();
+                    foreach (Material item in cart)
+                        if (item.Category != "Glass" && item.Category != "Frame")
+                            fs.Add(item);
+                }
+
+                double res = ComputePrice(f, g, fs);
+                lblPrice.Text = res.ToString();
+                lblFullPrice.Text = (res / 10.0 + res).ToString();
+            }
+        }
+        private void tbxH_TextChanged(object sender, EventArgs e)
+        {
+            UpdatePrice();
+        }
+
         // Data
         private void InitializeDataGridView()
         {
@@ -273,6 +336,7 @@ namespace StekloMaster
                     foreach (Material i in cart)
                         dgwCart.Rows.Add(i.Category, i.Name, i.Color, i.CostPerMeter);
                 }
+            UpdatePrice();
         }
         private void RemoveFromCart(string cat, string n, string col, string cost)
         {
@@ -289,6 +353,7 @@ namespace StekloMaster
                     foreach (Material i in cart)
                         dgwCart.Rows.Add(i.Category, i.Name, i.Color, i.CostPerMeter);
                 }
+            UpdatePrice();
         }
         // Add/Remove to Cart
         private void dgwFrame_Click(object sender, EventArgs e)
@@ -354,6 +419,18 @@ namespace StekloMaster
             }
         }
 
+
+        // Design
+        private void tbxH_Click(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.DodgerBlue;
+            panel2.BackColor = Color.SlateGray;
+        }
+        private void tbxW_Click(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.DodgerBlue;
+            panel1.BackColor = Color.SlateGray;
+        }
 
         // ExpandMenu
         private void InitializeExpandMenu()
@@ -475,6 +552,11 @@ namespace StekloMaster
                 b3.Tag = 0;
             }
             CheckExpandMenuSpace();
+        }
+
+        private void pSize_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
