@@ -29,7 +29,6 @@ namespace StekloMaster
         }
         private void PageHome_Load(object sender, EventArgs e)
         {
-            //pbGallery.Image = Image.FromFile(imgs[1]);
             timer.Start();
         }
 
