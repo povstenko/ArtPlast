@@ -20,7 +20,7 @@ namespace StekloMaster
         SqlCommand cmd = null;
         string DIR_PATH = Directory.GetCurrentDirectory() + "..\\..\\..\\";
 
-        //List<Material> materials;
+        List<Material> materials;
 
         public PageDatabase()
         {
@@ -37,7 +37,7 @@ namespace StekloMaster
             InitializeDataGridView();
             cmbxTables.SelectedIndex = 0;
             lblDatabase.Text = strbuilder.InitialCatalog;
-           // materials = new List<Material>();
+            materials = new List<Material>();
         }
 
         private string GetDatabaseURL(string databasename)
@@ -156,27 +156,28 @@ namespace StekloMaster
                 reader = await cmd.ExecuteReaderAsync();
                 dgwMaterials.Rows.Clear();
                 dgwUsers.Rows.Clear();
-                //materials.Clear();
+                materials.Clear();
                 while (await reader.ReadAsync())
                 {
                     if(cmbxTables.Text == "[Materials]")
                     {
                         dgwMaterials.BringToFront();
                         dgwMaterials.Rows.Add(reader["Id"], reader["Category"], reader["Name"], reader["Color"], reader["CostPerMeter"], reader["Description"]);
+                        materials.Add(new Material(
+                        (int)reader["Id"],
+                        (string)reader["Category"],
+                        (string)reader["Name"],
+                        (string)reader["Color"],
+                        (int)reader["CostPerMeter"],
+                        (string)reader["Description"])
+                        );
                     }
                     else
                     {
                         dgwUsers.BringToFront();
                         dgwUsers.Rows.Add(reader["Id"], reader["FirstName"], reader["SecondName"], reader["Login"], reader["Password"], reader["Email"], reader["isAdmin"]);
                     }
-                    //materials.Add(new Material(
-                    //    (int)reader["Id"],
-                    //    (string)reader["Category"],
-                    //    (string)reader["Name"],
-                    //    (string)reader["Color"],
-                    //    (int)reader["CostPerMeter"],
-                    //    (string)reader["Description"])
-                    //    );
+                    
                 }
             }
             catch (Exception ex)
@@ -201,19 +202,9 @@ namespace StekloMaster
             RefreshData();
         }
 
-        private void dgwMaterials_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-
-        }
-
         private void btnExecute_Click(object sender, EventArgs e)
         {
             RefreshData();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cmbxTables_SelectedIndexChanged(object sender, EventArgs e)

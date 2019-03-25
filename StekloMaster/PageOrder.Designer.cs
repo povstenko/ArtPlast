@@ -98,6 +98,7 @@
             this.dgwFurniture.AllowUserToDeleteRows = false;
             this.dgwFurniture.AllowUserToResizeColumns = false;
             this.dgwFurniture.AllowUserToResizeRows = false;
+            this.dgwFurniture.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgwFurniture.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwFurniture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFurniture.Location = new System.Drawing.Point(0, 0);
@@ -126,6 +127,7 @@
             this.dgwGlass.AllowUserToDeleteRows = false;
             this.dgwGlass.AllowUserToResizeColumns = false;
             this.dgwGlass.AllowUserToResizeRows = false;
+            this.dgwGlass.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgwGlass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwGlass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwGlass.Location = new System.Drawing.Point(0, 0);
@@ -154,6 +156,7 @@
             this.dgwFrame.AllowUserToDeleteRows = false;
             this.dgwFrame.AllowUserToResizeColumns = false;
             this.dgwFrame.AllowUserToResizeRows = false;
+            this.dgwFrame.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgwFrame.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwFrame.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFrame.Location = new System.Drawing.Point(0, 0);
@@ -377,6 +380,7 @@
             this.dgwCart.AllowUserToDeleteRows = false;
             this.dgwCart.AllowUserToResizeColumns = false;
             this.dgwCart.AllowUserToResizeRows = false;
+            this.dgwCart.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgwCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgwCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCart.Location = new System.Drawing.Point(361, 56);

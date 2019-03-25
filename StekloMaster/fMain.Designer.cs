@@ -232,7 +232,6 @@
             // 
             this.pageDatabase.Location = new System.Drawing.Point(204, 24);
             this.pageDatabase.Name = "pageDatabase";
-            //this.pageDatabase.Size = new System.Drawing.Size(788, 528);
             this.pageDatabase.TabIndex = 11;
             // 
             // fMain
