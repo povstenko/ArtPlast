@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageOrder));
             this.label2 = new System.Windows.Forms.Label();
             this.p3 = new System.Windows.Forms.Panel();
@@ -36,9 +37,6 @@
             this.dgwGlass = new System.Windows.Forms.DataGridView();
             this.p1 = new System.Windows.Forms.Panel();
             this.dgwFrame = new System.Windows.Forms.DataGridView();
-            this.b3 = new System.Windows.Forms.Button();
-            this.b2 = new System.Windows.Forms.Button();
-            this.b1 = new System.Windows.Forms.Button();
             this.pSize = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tbxFrame = new System.Windows.Forms.TextBox();
@@ -50,7 +48,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBuy = new System.Windows.Forms.Button();
             this.lblFullPrice = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,6 +56,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgwCart = new System.Windows.Forms.DataGridView();
+            this.btnBuy = new System.Windows.Forms.Button();
+            this.b3 = new System.Windows.Forms.Button();
+            this.b2 = new System.Windows.Forms.Button();
+            this.b1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.p3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFurniture)).BeginInit();
             this.p2.SuspendLayout();
@@ -164,63 +166,6 @@
             this.dgwFrame.TabIndex = 22;
             this.dgwFrame.DoubleClick += new System.EventHandler(this.dgwFrame_Click);
             // 
-            // b3
-            // 
-            this.b3.BackColor = System.Drawing.SystemColors.Menu;
-            this.b3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b3.FlatAppearance.BorderSize = 0;
-            this.b3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b3.Image = ((System.Drawing.Image)(resources.GetObject("b3.Image")));
-            this.b3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.b3.Location = new System.Drawing.Point(15, 326);
-            this.b3.Name = "b3";
-            this.b3.Size = new System.Drawing.Size(322, 23);
-            this.b3.TabIndex = 8;
-            this.b3.Tag = "0";
-            this.b3.Text = "Forniture";
-            this.b3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.b3.UseVisualStyleBackColor = false;
-            this.b3.Click += new System.EventHandler(this.ExpandMenu3_Click);
-            // 
-            // b2
-            // 
-            this.b2.BackColor = System.Drawing.SystemColors.Menu;
-            this.b2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b2.FlatAppearance.BorderSize = 0;
-            this.b2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b2.Image = ((System.Drawing.Image)(resources.GetObject("b2.Image")));
-            this.b2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.b2.Location = new System.Drawing.Point(15, 191);
-            this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(322, 23);
-            this.b2.TabIndex = 7;
-            this.b2.Tag = "0";
-            this.b2.Text = "Glass";
-            this.b2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.b2.UseVisualStyleBackColor = false;
-            this.b2.Click += new System.EventHandler(this.ExpandMenu2_Click);
-            // 
-            // b1
-            // 
-            this.b1.BackColor = System.Drawing.SystemColors.Menu;
-            this.b1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b1.FlatAppearance.BorderSize = 0;
-            this.b1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b1.Image = ((System.Drawing.Image)(resources.GetObject("b1.Image")));
-            this.b1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.b1.Location = new System.Drawing.Point(15, 56);
-            this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(322, 40);
-            this.b1.TabIndex = 6;
-            this.b1.Tag = "0";
-            this.b1.Text = "Frame";
-            this.b1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.b1.UseVisualStyleBackColor = false;
-            this.b1.Click += new System.EventHandler(this.ExpandMenu1_Click);
-            // 
             // pSize
             // 
             this.pSize.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -258,6 +203,7 @@
             this.tbxFrame.Size = new System.Drawing.Size(44, 16);
             this.tbxFrame.TabIndex = 24;
             this.tbxFrame.Text = "0,1";
+            this.toolTip1.SetToolTip(this.tbxFrame, "Frmae width");
             this.tbxFrame.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
             // 
             // label10
@@ -269,6 +215,7 @@
             this.label10.Size = new System.Drawing.Size(78, 15);
             this.label10.TabIndex = 23;
             this.label10.Text = "Frame width:";
+            this.toolTip1.SetToolTip(this.label10, "Frmae width");
             // 
             // panel1
             // 
@@ -296,6 +243,7 @@
             this.tbxW.Size = new System.Drawing.Size(44, 16);
             this.tbxW.TabIndex = 20;
             this.tbxW.Text = "1";
+            this.toolTip1.SetToolTip(this.tbxW, "Window width");
             this.tbxW.Click += new System.EventHandler(this.tbxW_Click);
             this.tbxW.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
             // 
@@ -309,6 +257,7 @@
             this.tbxH.Size = new System.Drawing.Size(44, 16);
             this.tbxH.TabIndex = 19;
             this.tbxH.Text = "2";
+            this.toolTip1.SetToolTip(this.tbxH, "Window height");
             this.tbxH.Click += new System.EventHandler(this.tbxH_Click);
             this.tbxH.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
             // 
@@ -321,6 +270,7 @@
             this.label9.Size = new System.Drawing.Size(44, 15);
             this.label9.TabIndex = 18;
             this.label9.Text = "Width:";
+            this.toolTip1.SetToolTip(this.label9, "Window width");
             // 
             // label8
             // 
@@ -331,6 +281,7 @@
             this.label8.Size = new System.Drawing.Size(45, 15);
             this.label8.TabIndex = 17;
             this.label8.Text = "Height:";
+            this.toolTip1.SetToolTip(this.label8, "Window height");
             // 
             // label1
             // 
@@ -343,24 +294,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "SIZE";
             // 
-            // btnBuy
-            // 
-            this.btnBuy.BackColor = System.Drawing.Color.Orange;
-            this.btnBuy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuy.FlatAppearance.BorderSize = 0;
-            this.btnBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuy.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnBuy.ForeColor = System.Drawing.Color.White;
-            this.btnBuy.Image = global::StekloMaster.Properties.Resources.icons8_shopping_cart_50;
-            this.btnBuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuy.Location = new System.Drawing.Point(598, 444);
-            this.btnBuy.Name = "btnBuy";
-            this.btnBuy.Size = new System.Drawing.Size(166, 60);
-            this.btnBuy.TabIndex = 13;
-            this.btnBuy.Tag = "0";
-            this.btnBuy.Text = "BUY";
-            this.btnBuy.UseVisualStyleBackColor = false;
-            // 
             // lblFullPrice
             // 
             this.lblFullPrice.AutoSize = true;
@@ -370,6 +303,7 @@
             this.lblFullPrice.Size = new System.Drawing.Size(29, 33);
             this.lblFullPrice.TabIndex = 14;
             this.lblFullPrice.Text = "0";
+            this.toolTip1.SetToolTip(this.lblFullPrice, "Full frice with 10%");
             // 
             // lblPrice
             // 
@@ -380,6 +314,7 @@
             this.lblPrice.Size = new System.Drawing.Size(20, 23);
             this.lblPrice.TabIndex = 15;
             this.lblPrice.Text = "0";
+            this.toolTip1.SetToolTip(this.lblPrice, "Simple price of all materials");
             // 
             // label3
             // 
@@ -390,6 +325,7 @@
             this.label3.Size = new System.Drawing.Size(59, 15);
             this.label3.TabIndex = 16;
             this.label3.Text = "Full price";
+            this.toolTip1.SetToolTip(this.label3, "Full frice with 10%");
             // 
             // label4
             // 
@@ -400,6 +336,7 @@
             this.label4.Size = new System.Drawing.Size(35, 15);
             this.label4.TabIndex = 17;
             this.label4.Text = "Price";
+            this.toolTip1.SetToolTip(this.label4, "Simple price of all materials");
             // 
             // label5
             // 
@@ -410,6 +347,7 @@
             this.label5.Size = new System.Drawing.Size(29, 33);
             this.label5.TabIndex = 18;
             this.label5.Text = "$";
+            this.toolTip1.SetToolTip(this.label5, "Full frice with 10%");
             // 
             // label6
             // 
@@ -420,6 +358,7 @@
             this.label6.Size = new System.Drawing.Size(20, 23);
             this.label6.TabIndex = 19;
             this.label6.Text = "$";
+            this.toolTip1.SetToolTip(this.label6, "Simple price of all materials");
             // 
             // label7
             // 
@@ -448,7 +387,87 @@
             this.dgwCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwCart.Size = new System.Drawing.Size(410, 304);
             this.dgwCart.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.dgwCart, "Your cart");
             this.dgwCart.DoubleClick += new System.EventHandler(this.dgwCart_DoubleClick);
+            // 
+            // btnBuy
+            // 
+            this.btnBuy.BackColor = System.Drawing.Color.Orange;
+            this.btnBuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuy.FlatAppearance.BorderSize = 0;
+            this.btnBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuy.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnBuy.ForeColor = System.Drawing.Color.White;
+            this.btnBuy.Image = global::StekloMaster.Properties.Resources.icons8_shopping_cart_50;
+            this.btnBuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuy.Location = new System.Drawing.Point(598, 444);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Size = new System.Drawing.Size(166, 60);
+            this.btnBuy.TabIndex = 13;
+            this.btnBuy.Tag = "0";
+            this.btnBuy.Text = "BUY";
+            this.toolTip1.SetToolTip(this.btnBuy, "Buy window");
+            this.btnBuy.UseVisualStyleBackColor = false;
+            // 
+            // b3
+            // 
+            this.b3.BackColor = System.Drawing.SystemColors.Menu;
+            this.b3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b3.FlatAppearance.BorderSize = 0;
+            this.b3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b3.Image = ((System.Drawing.Image)(resources.GetObject("b3.Image")));
+            this.b3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.b3.Location = new System.Drawing.Point(15, 326);
+            this.b3.Name = "b3";
+            this.b3.Size = new System.Drawing.Size(322, 23);
+            this.b3.TabIndex = 8;
+            this.b3.Tag = "0";
+            this.b3.Text = "Forniture";
+            this.b3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.b3, "Choose your furniture");
+            this.b3.UseVisualStyleBackColor = false;
+            this.b3.Click += new System.EventHandler(this.ExpandMenu3_Click);
+            // 
+            // b2
+            // 
+            this.b2.BackColor = System.Drawing.SystemColors.Menu;
+            this.b2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b2.FlatAppearance.BorderSize = 0;
+            this.b2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b2.Image = ((System.Drawing.Image)(resources.GetObject("b2.Image")));
+            this.b2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.b2.Location = new System.Drawing.Point(15, 191);
+            this.b2.Name = "b2";
+            this.b2.Size = new System.Drawing.Size(322, 23);
+            this.b2.TabIndex = 7;
+            this.b2.Tag = "0";
+            this.b2.Text = "Glass";
+            this.b2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.b2, "Choose your glass");
+            this.b2.UseVisualStyleBackColor = false;
+            this.b2.Click += new System.EventHandler(this.ExpandMenu2_Click);
+            // 
+            // b1
+            // 
+            this.b1.BackColor = System.Drawing.SystemColors.Menu;
+            this.b1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.b1.FlatAppearance.BorderSize = 0;
+            this.b1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.b1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.b1.Image = ((System.Drawing.Image)(resources.GetObject("b1.Image")));
+            this.b1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.b1.Location = new System.Drawing.Point(15, 56);
+            this.b1.Name = "b1";
+            this.b1.Size = new System.Drawing.Size(322, 40);
+            this.b1.TabIndex = 6;
+            this.b1.Tag = "0";
+            this.b1.Text = "Frame";
+            this.b1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.b1, "Choose your frame");
+            this.b1.UseVisualStyleBackColor = false;
+            this.b1.Click += new System.EventHandler(this.ExpandMenu1_Click);
             // 
             // PageOrder
             // 
@@ -520,5 +539,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox tbxFrame;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

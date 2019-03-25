@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgwMaterials = new System.Windows.Forms.DataGridView();
             this.cmbxSearchIn = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.btnDesc = new System.Windows.Forms.Button();
             this.btnAsc = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgwMaterials)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +62,7 @@
             this.dgwMaterials.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwMaterials.Size = new System.Drawing.Size(534, 488);
             this.dgwMaterials.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.dgwMaterials, "Materials");
             this.dgwMaterials.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwMaterials_CellContentClick);
             // 
             // cmbxSearchIn
@@ -159,6 +162,7 @@
             this.rtbxInfo.Size = new System.Drawing.Size(200, 268);
             this.rtbxInfo.TabIndex = 15;
             this.rtbxInfo.Text = "";
+            this.toolTip1.SetToolTip(this.rtbxInfo, "Description");
             // 
             // btnDesc
             // 
@@ -175,6 +179,7 @@
             this.btnDesc.Size = new System.Drawing.Size(36, 36);
             this.btnDesc.TabIndex = 17;
             this.btnDesc.Tag = "DESC";
+            this.toolTip1.SetToolTip(this.btnDesc, "Descending");
             this.btnDesc.UseVisualStyleBackColor = false;
             this.btnDesc.Click += new System.EventHandler(this.btnDesc_Click);
             // 
@@ -193,6 +198,7 @@
             this.btnAsc.Size = new System.Drawing.Size(36, 36);
             this.btnAsc.TabIndex = 16;
             this.btnAsc.Tag = "ASC";
+            this.toolTip1.SetToolTip(this.btnAsc, "Ascending");
             this.btnAsc.UseVisualStyleBackColor = false;
             this.btnAsc.Click += new System.EventHandler(this.btnAsc_Click);
             // 
@@ -210,6 +216,7 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(35, 35);
             this.btnSearch.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.btnSearch, "Search");
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -253,5 +260,6 @@
         private System.Windows.Forms.RichTextBox rtbxInfo;
         private System.Windows.Forms.Button btnAsc;
         private System.Windows.Forms.Button btnDesc;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -86,6 +86,12 @@
       <DependentUpon>fMainDemo.cs</DependentUpon>
     </Compile>
     <Compile Include="Material.cs" />
+    <Compile Include="PageDatabase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageDatabase.Designer.cs">
+      <DependentUpon>PageDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="PageHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     <Compile Include="SignUpPage.Designer.cs">
       <DependentUpon>SignUpPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMainDemo.resx">
       <DependentUpon>fMainDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageDatabase.resx">
+      <DependentUpon>PageDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageHome.resx">
       <DependentUpon>PageHome.cs</DependentUpon>

@@ -16,7 +16,7 @@ namespace StekloMaster
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new fMain());//fLogin()
+			Application.Run(new fMain(true));//fLogin()
 		}
 	}
 }

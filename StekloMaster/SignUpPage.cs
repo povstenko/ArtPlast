@@ -87,7 +87,7 @@ namespace StekloMaster
                         cmdAdd.Parameters.AddWithValue("admin", cbxAdmin.Checked);
                         await cmdAdd.ExecuteNonQueryAsync();
 
-                        fMain main = new fMain();
+                        fMain main = new fMain(cbxAdmin.Checked);
                         login.Hide();
                         main.ShowDialog();
                         login.Close();

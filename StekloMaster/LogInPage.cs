@@ -59,7 +59,7 @@ namespace StekloMaster
                 sda.Fill(dt);
                 if (Convert.ToInt32(dt.Rows[0][0]) == 1)
                 {
-                    fMain main = new fMain();
+                    fMain main = new fMain(true);
                     login.Hide();
                     main.ShowDialog();
                     login.Close();

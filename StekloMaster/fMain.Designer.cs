@@ -42,7 +42,7 @@
             this.pageOrder = new StekloMaster.PageOrder();
             this.pageHome = new StekloMaster.PageHome();
             this.pageMaterials = new StekloMaster.PageMaterials();
-            //this.pageDatabase = new StekloMaster.PageDatabase();
+            this.pageDatabase = new StekloMaster.PageDatabase();
             this.pMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pTop.SuspendLayout();
@@ -227,14 +227,13 @@
             this.pageMaterials.Name = "pageMaterials";
             this.pageMaterials.Size = new System.Drawing.Size(788, 528);
             this.pageMaterials.TabIndex = 10;
-            //// 
-            //// pageDatabase
-            //// 
-            //this.pageDatabase.BackColor = System.Drawing.Color.White;
-            //this.pageDatabase.Location = new System.Drawing.Point(204, 24);
-            //this.pageDatabase.Name = "pageDatabase";
+            // 
+            // pageDatabase
+            // 
+            this.pageDatabase.Location = new System.Drawing.Point(204, 24);
+            this.pageDatabase.Name = "pageDatabase";
             //this.pageDatabase.Size = new System.Drawing.Size(788, 528);
-            //this.pageDatabase.TabIndex = 11;
+            this.pageDatabase.TabIndex = 11;
             // 
             // fMain
             // 
@@ -246,6 +245,7 @@
             this.Controls.Add(this.pTop);
             this.Controls.Add(this.pageOrder);
             this.Controls.Add(this.pageMaterials);
+            this.Controls.Add(this.pageDatabase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMain";
@@ -273,7 +273,7 @@
         private PageHome pageHome;
         private PageOrder pageOrder;
         private PageMaterials pageMaterials;
-        //private PageDatabase pageDatabase;
+        private PageDatabase pageDatabase;
     }
 }
 

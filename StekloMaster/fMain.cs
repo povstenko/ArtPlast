@@ -15,7 +15,7 @@ namespace StekloMaster
         private Point mouseOffset;
         private bool isMouseDown = false;
 
-        public fMain()
+        public fMain(bool isAdmin)
         {
             InitializeComponent();
             pSide.Height = button1.Height;
@@ -23,6 +23,8 @@ namespace StekloMaster
 
             HidePages();
             pageHome.Visible = true;
+
+            button4.Visible = isAdmin;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace StekloMaster
             pageOrder.Visible = false;
             pageMaterials.Visible = false;
             
-            //pageDatabase.Visible = false;
+            pageDatabase.Visible = false;
         }
         private void MoveSidePointer(Button btn)
         {
@@ -67,7 +69,7 @@ namespace StekloMaster
         {
             HidePages();
             MoveSidePointer((Button)sender);
-            //pageDatabase.Visible = true;
+            pageDatabase.Visible = true;
         }
 
 
