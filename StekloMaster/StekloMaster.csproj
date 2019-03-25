@@ -85,6 +85,7 @@
     <Compile Include="fMainDemo.Designer.cs">
       <DependentUpon>fMainDemo.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="Material.cs" />
     <Compile Include="PageDatabase.cs">
       <SubType>UserControl</SubType>

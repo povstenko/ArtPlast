@@ -73,7 +73,7 @@ namespace StekloMaster
                 w = Convert.ToDouble(tbxW.Text);
                 c = Convert.ToDouble(tbxFrame.Text);
             }
-            catch(Exception ex) {/*if cant convert*/}
+            catch(Exception) {/*if cant convert*/}
 
             double formula1 = h*w - 2*h*c - 2*w*c + 4*c*c;// = (h-2c)(w-2c) =
             double formula2 = h*w - formula1;// = 2c(h + w - 2c).

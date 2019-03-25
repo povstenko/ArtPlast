@@ -21,6 +21,7 @@ namespace StekloMaster
         string DIR_PATH = Directory.GetCurrentDirectory() + "..\\..\\..\\";
 
         List<Material> materials;
+        List<User> users;
 
         public PageDatabase()
         {
@@ -38,6 +39,10 @@ namespace StekloMaster
             cmbxTables.SelectedIndex = 0;
             lblDatabase.Text = strbuilder.InitialCatalog;
             materials = new List<Material>();
+            users = new List<User>();
+
+            dgwMaterials.Visible = true;
+            dgwUsers.Visible = false;
         }
 
         private string GetDatabaseURL(string databasename)
@@ -157,27 +162,39 @@ namespace StekloMaster
                 dgwMaterials.Rows.Clear();
                 dgwUsers.Rows.Clear();
                 materials.Clear();
+                users.Clear();
                 while (await reader.ReadAsync())
                 {
                     if(cmbxTables.Text == "[Materials]")
                     {
-                        dgwMaterials.BringToFront();
+                        dgwMaterials.Visible = true;
+                        dgwUsers.Visible = false;
                         dgwMaterials.Rows.Add(reader["Id"], reader["Category"], reader["Name"], reader["Color"], reader["CostPerMeter"], reader["Description"]);
-                        materials.Add(new Material(
-                        (int)reader["Id"],
-                        (string)reader["Category"],
-                        (string)reader["Name"],
-                        (string)reader["Color"],
-                        (int)reader["CostPerMeter"],
-                        (string)reader["Description"])
-                        );
+
+                        int id = (int)reader["Id"];
+                        string cat = (string)reader["Category"];
+                        string name = (string)reader["Name"];
+                        string color = (string)reader["Color"];
+                        int cost = Convert.ToInt32(reader["CostPerMeter"]);
+                        string descr = (string)reader["Description"];
+                        materials.Add(new Material(id, cat, name, color, cost, descr));
                     }
                     else
                     {
-                        dgwUsers.BringToFront();
+                        dgwUsers.Visible = true;
+                        dgwMaterials.Visible = false;
                         dgwUsers.Rows.Add(reader["Id"], reader["FirstName"], reader["SecondName"], reader["Login"], reader["Password"], reader["Email"], reader["isAdmin"]);
+                        
+                        User u = new User(
+                            (int)reader["Id"], 
+                            (string)reader["FirstName"],
+                            (string)reader["SecondName"], 
+                            (string)reader["Login"], 
+                            (string)reader["Password"], 
+                            (string)reader["Email"], 
+                            (bool)reader["isAdmin"]);
+                        users.Add(u);
                     }
-                    
                 }
             }
             catch (Exception ex)
@@ -210,6 +227,18 @@ namespace StekloMaster
         private void cmbxTables_SelectedIndexChanged(object sender, EventArgs e)
         {
             RefreshData();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (dgwMaterials.Visible)
+            {
+                // add new row in Materials
+            }
+            else
+            {
+                // add new row in User
+            }
         }
     }
 }

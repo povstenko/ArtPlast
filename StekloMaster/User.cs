@@ -32,8 +32,8 @@ namespace StekloMaster
             get { return login; }
         }
 
-        private int password;
-        public int Password
+        private string password;
+        public string Password
         {
             get { return password; }
         }
@@ -54,7 +54,7 @@ namespace StekloMaster
         {
                 
         }
-        public User(int id, string firstName, string secondName, string login, int password, string email, bool isAdmin)
+        public User(int id, string firstName, string secondName, string login, string password, string email, bool isAdmin)
         {
             this.id = id;
             this.firstName = firstName;

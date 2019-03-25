@@ -114,8 +114,8 @@ namespace StekloMaster
             }
             catch (Exception ex)
             {
-                //if(ex.Message != "Отменена задача.")
-                    //MessageBox.Show(ex.Message);
+                if(ex.Message != "Отменена задача.")
+                MessageBox.Show(ex.Message);
             }
             finally
             {
