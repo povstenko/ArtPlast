@@ -86,12 +86,6 @@
       <DependentUpon>fMainDemo.cs</DependentUpon>
     </Compile>
     <Compile Include="Material.cs" />
-    <Compile Include="PageDatabase.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PageDatabase.Designer.cs">
-      <DependentUpon>PageDatabase.cs</DependentUpon>
-    </Compile>
     <Compile Include="PageHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,9 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMainDemo.resx">
       <DependentUpon>fMainDemo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PageDatabase.resx">
-      <DependentUpon>PageDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageHome.resx">
       <DependentUpon>PageHome.cs</DependentUpon>
@@ -189,6 +180,48 @@
     <None Include="bin\Debug\img\sample4.jpg" />
     <None Include="bin\Debug\img\sample5.jpg" />
     <None Include="bin\Debug\img\sample6.jpg" />
+    <None Include="Resources\icons8-add-user-male-24.png" />
+    <None Include="Resources\icons8-add-user-male-50.png" />
+    <None Include="Resources\icons8-cancel-24.png" />
+    <None Include="Resources\icons8-cancel-50.png" />
+    <None Include="Resources\icons8-collapse-arrow-24.png" />
+    <None Include="Resources\icons8-collapse-arrow-50.png" />
+    <None Include="Resources\icons8-database-24.png" />
+    <None Include="Resources\icons8-database-50.png" />
+    <None Include="Resources\icons8-database-administrator-24.png" />
+    <None Include="Resources\icons8-database-administrator-50.png" />
+    <None Include="Resources\icons8-edit-24.png" />
+    <None Include="Resources\icons8-edit-50.png" />
+    <None Include="Resources\icons8-expand-arrow-24.png" />
+    <None Include="Resources\icons8-expand-arrow-50.png" />
+    <None Include="Resources\icons8-gender-neutral-user-24.png" />
+    <None Include="Resources\icons8-gender-neutral-user-50.png" />
+    <None Include="Resources\icons8-home-24.png" />
+    <None Include="Resources\icons8-home-50.png" />
+    <None Include="Resources\icons8-info-24.png" />
+    <None Include="Resources\icons8-info-50.png" />
+    <None Include="Resources\icons8-online-support-24.png" />
+    <None Include="Resources\icons8-online-support-50.png" />
+    <None Include="Resources\icons8-open-window-24.png" />
+    <None Include="Resources\icons8-open-window-50.png" />
+    <None Include="Resources\icons8-plus-24.png" />
+    <None Include="Resources\icons8-plus-50.png" />
+    <None Include="Resources\icons8-product-24.png" />
+    <None Include="Resources\icons8-product-50.png" />
+    <None Include="Resources\icons8-search-24.png" />
+    <None Include="Resources\icons8-search-50.png" />
+    <None Include="Resources\icons8-shopping-cart-24.png" />
+    <None Include="Resources\icons8-shopping-cart-50.png" />
+    <None Include="Resources\icons8-trash-24.png" />
+    <None Include="Resources\icons8-trash-50.png" />
+    <None Include="Resources\DESCW50.png" />
+    <None Include="Resources\ASCB24.png" />
+    <None Include="Resources\ASCB50.png" />
+    <None Include="Resources\ASCW24.png" />
+    <None Include="Resources\ASCW50.png" />
+    <None Include="Resources\DESCB24.png" />
+    <None Include="Resources\DESCB50.png" />
+    <None Include="Resources\DESCW24.png" />
     <Content Include="WindowShop.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

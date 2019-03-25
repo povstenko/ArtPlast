@@ -34,12 +34,12 @@
             this.p1 = new System.Windows.Forms.Panel();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbxOrder = new System.Windows.Forms.ComboBox();
             this.rtbxInfo = new System.Windows.Forms.RichTextBox();
-            this.btnAsc = new System.Windows.Forms.Button();
             this.btnDesc = new System.Windows.Forms.Button();
+            this.btnAsc = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMaterials)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,22 +120,6 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Search in:";
             // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(746, 38);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(24, 24);
-            this.btnSearch.TabIndex = 12;
-            this.btnSearch.Text = "S";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -176,39 +160,58 @@
             this.rtbxInfo.TabIndex = 15;
             this.rtbxInfo.Text = "";
             // 
-            // btnAsc
-            // 
-            this.btnAsc.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAsc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAsc.FlatAppearance.BorderSize = 0;
-            this.btnAsc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAsc.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAsc.ForeColor = System.Drawing.Color.White;
-            this.btnAsc.Location = new System.Drawing.Point(574, 178);
-            this.btnAsc.Name = "btnAsc";
-            this.btnAsc.Size = new System.Drawing.Size(36, 36);
-            this.btnAsc.TabIndex = 16;
-            this.btnAsc.Tag = "ASC";
-            this.btnAsc.Text = "ASC";
-            this.btnAsc.UseVisualStyleBackColor = false;
-            this.btnAsc.Click += new System.EventHandler(this.btnAsc_Click);
-            // 
             // btnDesc
             // 
             this.btnDesc.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDesc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDesc.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDesc.FlatAppearance.BorderSize = 0;
             this.btnDesc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDesc.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDesc.ForeColor = System.Drawing.Color.Black;
+            this.btnDesc.Image = global::StekloMaster.Properties.Resources.DESCB24;
             this.btnDesc.Location = new System.Drawing.Point(616, 178);
             this.btnDesc.Name = "btnDesc";
             this.btnDesc.Size = new System.Drawing.Size(36, 36);
             this.btnDesc.TabIndex = 17;
             this.btnDesc.Tag = "DESC";
-            this.btnDesc.Text = "DES";
             this.btnDesc.UseVisualStyleBackColor = false;
             this.btnDesc.Click += new System.EventHandler(this.btnDesc_Click);
+            // 
+            // btnAsc
+            // 
+            this.btnAsc.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAsc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAsc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsc.FlatAppearance.BorderSize = 0;
+            this.btnAsc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsc.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAsc.ForeColor = System.Drawing.Color.White;
+            this.btnAsc.Image = global::StekloMaster.Properties.Resources.ASCW24;
+            this.btnAsc.Location = new System.Drawing.Point(574, 178);
+            this.btnAsc.Name = "btnAsc";
+            this.btnAsc.Size = new System.Drawing.Size(36, 36);
+            this.btnAsc.TabIndex = 16;
+            this.btnAsc.Tag = "ASC";
+            this.btnAsc.UseVisualStyleBackColor = false;
+            this.btnAsc.Click += new System.EventHandler(this.btnAsc_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::StekloMaster.Properties.Resources.icons8_search_24;
+            this.btnSearch.Location = new System.Drawing.Point(746, 24);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(35, 35);
+            this.btnSearch.TabIndex = 12;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // PageMaterials
             // 

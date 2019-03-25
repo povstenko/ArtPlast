@@ -40,6 +40,13 @@
             this.b2 = new System.Windows.Forms.Button();
             this.b1 = new System.Windows.Forms.Button();
             this.pSize = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tbxFrame = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tbxW = new System.Windows.Forms.TextBox();
+            this.tbxH = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,13 +59,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgwCart = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tbxW = new System.Windows.Forms.TextBox();
-            this.tbxH = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tbxFrame = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.p3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFurniture)).BeginInit();
             this.p2.SuspendLayout();
@@ -240,6 +240,78 @@
             this.pSize.TabIndex = 12;
             this.pSize.Paint += new System.Windows.Forms.PaintEventHandler(this.pSize_Paint);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SlateGray;
+            this.panel3.Location = new System.Drawing.Point(98, 122);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(44, 1);
+            this.panel3.TabIndex = 25;
+            // 
+            // tbxFrame
+            // 
+            this.tbxFrame.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxFrame.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxFrame.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxFrame.Location = new System.Drawing.Point(98, 106);
+            this.tbxFrame.Name = "tbxFrame";
+            this.tbxFrame.Size = new System.Drawing.Size(44, 16);
+            this.tbxFrame.TabIndex = 24;
+            this.tbxFrame.Text = "0,1";
+            this.tbxFrame.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(18, 108);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 15);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Frame width:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SlateGray;
+            this.panel1.Location = new System.Drawing.Point(98, 60);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(44, 1);
+            this.panel1.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SlateGray;
+            this.panel2.Location = new System.Drawing.Point(98, 92);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(44, 1);
+            this.panel2.TabIndex = 21;
+            // 
+            // tbxW
+            // 
+            this.tbxW.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxW.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxW.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxW.Location = new System.Drawing.Point(98, 76);
+            this.tbxW.Name = "tbxW";
+            this.tbxW.Size = new System.Drawing.Size(44, 16);
+            this.tbxW.TabIndex = 20;
+            this.tbxW.Text = "1";
+            this.tbxW.Click += new System.EventHandler(this.tbxW_Click);
+            this.tbxW.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
+            // 
+            // tbxH
+            // 
+            this.tbxH.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxH.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbxH.Location = new System.Drawing.Point(98, 44);
+            this.tbxH.Name = "tbxH";
+            this.tbxH.Size = new System.Drawing.Size(44, 16);
+            this.tbxH.TabIndex = 19;
+            this.tbxH.Text = "2";
+            this.tbxH.Click += new System.EventHandler(this.tbxH_Click);
+            this.tbxH.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -279,9 +351,9 @@
             this.btnBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuy.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnBuy.ForeColor = System.Drawing.Color.White;
-            this.btnBuy.Image = ((System.Drawing.Image)(resources.GetObject("btnBuy.Image")));
+            this.btnBuy.Image = global::StekloMaster.Properties.Resources.icons8_shopping_cart_50;
             this.btnBuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuy.Location = new System.Drawing.Point(591, 444);
+            this.btnBuy.Location = new System.Drawing.Point(598, 444);
             this.btnBuy.Name = "btnBuy";
             this.btnBuy.Size = new System.Drawing.Size(166, 60);
             this.btnBuy.TabIndex = 13;
@@ -377,78 +449,6 @@
             this.dgwCart.Size = new System.Drawing.Size(410, 304);
             this.dgwCart.TabIndex = 21;
             this.dgwCart.DoubleClick += new System.EventHandler(this.dgwCart_DoubleClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.SlateGray;
-            this.panel1.Location = new System.Drawing.Point(98, 60);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(44, 1);
-            this.panel1.TabIndex = 22;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SlateGray;
-            this.panel2.Location = new System.Drawing.Point(98, 92);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(44, 1);
-            this.panel2.TabIndex = 21;
-            // 
-            // tbxW
-            // 
-            this.tbxW.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxW.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxW.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxW.Location = new System.Drawing.Point(98, 76);
-            this.tbxW.Name = "tbxW";
-            this.tbxW.Size = new System.Drawing.Size(44, 16);
-            this.tbxW.TabIndex = 20;
-            this.tbxW.Text = "1";
-            this.tbxW.Click += new System.EventHandler(this.tbxW_Click);
-            this.tbxW.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
-            // 
-            // tbxH
-            // 
-            this.tbxH.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxH.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxH.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxH.Location = new System.Drawing.Point(98, 44);
-            this.tbxH.Name = "tbxH";
-            this.tbxH.Size = new System.Drawing.Size(44, 16);
-            this.tbxH.TabIndex = 19;
-            this.tbxH.Text = "2";
-            this.tbxH.Click += new System.EventHandler(this.tbxH_Click);
-            this.tbxH.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.SlateGray;
-            this.panel3.Location = new System.Drawing.Point(98, 122);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(44, 1);
-            this.panel3.TabIndex = 25;
-            // 
-            // tbxFrame
-            // 
-            this.tbxFrame.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbxFrame.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxFrame.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxFrame.Location = new System.Drawing.Point(98, 106);
-            this.tbxFrame.Name = "tbxFrame";
-            this.tbxFrame.Size = new System.Drawing.Size(44, 16);
-            this.tbxFrame.TabIndex = 24;
-            this.tbxFrame.Text = "0,1";
-            this.tbxFrame.TextChanged += new System.EventHandler(this.tbxH_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(18, 108);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 15);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Frame width:";
             // 
             // PageOrder
             // 

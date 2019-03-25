@@ -190,7 +190,9 @@ namespace StekloMaster
             if(btnAsc.BackColor == Color.WhiteSmoke)
             {
                 btnAsc.BackColor = Color.DodgerBlue;
+                btnAsc.Image = global::StekloMaster.Properties.Resources.ASCW24;
                 btnDesc.BackColor = Color.WhiteSmoke;
+                btnDesc.Image = global::StekloMaster.Properties.Resources.DESCB24;
 
                 isAsc = true;
                 RefreshData(null);
@@ -202,7 +204,9 @@ namespace StekloMaster
             if (btnDesc.BackColor == Color.WhiteSmoke)
             {
                 btnDesc.BackColor = Color.DodgerBlue;
+                btnDesc.Image = global::StekloMaster.Properties.Resources.DESCW24;
                 btnAsc.BackColor = Color.WhiteSmoke;
+                btnAsc.Image = global::StekloMaster.Properties.Resources.ASCB24;
 
                 isAsc = false;
                 RefreshData(null);
