@@ -48,6 +48,8 @@
             // 
             // dgwMaterials
             // 
+            this.dgwMaterials.AllowUserToAddRows = false;
+            this.dgwMaterials.AllowUserToDeleteRows = false;
             this.dgwMaterials.AllowUserToResizeColumns = false;
             this.dgwMaterials.AllowUserToResizeRows = false;
             this.dgwMaterials.BackgroundColor = System.Drawing.Color.WhiteSmoke;
@@ -56,7 +58,7 @@
             this.dgwMaterials.MultiSelect = false;
             this.dgwMaterials.Name = "dgwMaterials";
             this.dgwMaterials.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgwMaterials.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgwMaterials.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwMaterials.Size = new System.Drawing.Size(785, 492);
             this.dgwMaterials.TabIndex = 1;
             // 
@@ -71,7 +73,7 @@
             this.tbxCommand.Size = new System.Drawing.Size(410, 18);
             this.tbxCommand.TabIndex = 2;
             this.tbxCommand.Text = "ORDER BY [Id] ASC";
-            this.toolTip1.SetToolTip(this.tbxCommand, "SQL query string");
+            this.toolTip1.SetToolTip(this.tbxCommand, "SQL selection query string");
             // 
             // btnExecute
             // 
@@ -98,7 +100,7 @@
             this.label1.Size = new System.Drawing.Size(112, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "SELECT * FROM";
-            this.toolTip1.SetToolTip(this.label1, "SQL query string");
+            this.toolTip1.SetToolTip(this.label1, "SQL selection query string");
             // 
             // cmbxTables
             // 
@@ -116,11 +118,13 @@
             this.cmbxTables.Name = "cmbxTables";
             this.cmbxTables.Size = new System.Drawing.Size(113, 26);
             this.cmbxTables.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.cmbxTables, "SQL query string");
+            this.toolTip1.SetToolTip(this.cmbxTables, "SQL selection query string");
             this.cmbxTables.SelectedIndexChanged += new System.EventHandler(this.cmbxTables_SelectedIndexChanged);
             // 
             // dgwUsers
             // 
+            this.dgwUsers.AllowUserToAddRows = false;
+            this.dgwUsers.AllowUserToDeleteRows = false;
             this.dgwUsers.AllowUserToResizeColumns = false;
             this.dgwUsers.AllowUserToResizeRows = false;
             this.dgwUsers.BackgroundColor = System.Drawing.Color.WhiteSmoke;
@@ -130,7 +134,7 @@
             this.dgwUsers.Name = "dgwUsers";
             this.dgwUsers.ReadOnly = true;
             this.dgwUsers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgwUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgwUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwUsers.Size = new System.Drawing.Size(785, 492);
             this.dgwUsers.TabIndex = 6;
             // 
@@ -199,6 +203,7 @@
             this.btnRemove.TabIndex = 11;
             this.toolTip1.SetToolTip(this.btnRemove, "Remove current row from table");
             this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // PageDatabase
             // 
@@ -210,12 +215,12 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblDatabase);
             this.Controls.Add(this.cmbxTables);
-            this.Controls.Add(this.dgwMaterials);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExecute);
             this.Controls.Add(this.tbxCommand);
-            this.Controls.Add(this.dgwUsers);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgwMaterials);
+            this.Controls.Add(this.dgwUsers);
             this.Name = "PageDatabase";
             this.Size = new System.Drawing.Size(791, 530);
             this.Load += new System.EventHandler(this.PageDatabase_Load);

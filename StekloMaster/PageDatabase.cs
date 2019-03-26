@@ -44,7 +44,6 @@ namespace StekloMaster
             dgwMaterials.Visible = true;
             dgwUsers.Visible = false;
         }
-
         private string GetDatabaseURL(string databasename)
         {
             return $"{DIR_PATH}\\{databasename}";
@@ -218,12 +217,10 @@ namespace StekloMaster
         {
             RefreshData();
         }
-
         private void btnExecute_Click(object sender, EventArgs e)
         {
             RefreshData();
         }
-
         private void cmbxTables_SelectedIndexChanged(object sender, EventArgs e)
         {
             RefreshData();
@@ -269,6 +266,55 @@ namespace StekloMaster
             {
                 // add new row in User
             }
+        }
+        private async void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (dgwMaterials.Visible)
+            {
+                // remove row from Materials
+                if (dgwMaterials.CurrentCell != null)
+                {
+                    Material mat = materials[dgwMaterials.CurrentRow.Index];
+
+                    if (MessageBox.Show($"Do you want to delete this row from table [Materials]. It will be deleted permanentaly. Data: ({mat.ToString()})", "Delete row", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        sqlConnect.Close();
+                        try
+                        {
+                            await sqlConnect.OpenAsync();
+                            cmd = new SqlCommand($"DELETE FROM [Materials] WHERE [Id] = '{mat.Id}'", sqlConnect);
+                            reader = await cmd.ExecuteReaderAsync();
+                            await reader.ReadAsync();
+
+                            RefreshData();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            if (reader != null)
+                            {
+                                reader.Close();
+                            }
+                            else if (sqlConnect != null)
+                            {
+                                sqlConnect.Close();
+                            }
+                        }
+                    }
+                }
+            }
+            else
+            {
+                // remove row from User
+            }
+        }
+
+        private void dgwMaterials_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+
         }
     }
 }
