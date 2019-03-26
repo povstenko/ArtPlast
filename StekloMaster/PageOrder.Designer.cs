@@ -56,11 +56,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgwCart = new System.Windows.Forms.DataGridView();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnBuy = new System.Windows.Forms.Button();
             this.b3 = new System.Windows.Forms.Button();
             this.b2 = new System.Windows.Forms.Button();
             this.b1 = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.p3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFurniture)).BeginInit();
             this.p2.SuspendLayout();
@@ -411,6 +411,7 @@
             this.btnBuy.Text = "BUY";
             this.toolTip1.SetToolTip(this.btnBuy, "Buy window");
             this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // b3
             // 

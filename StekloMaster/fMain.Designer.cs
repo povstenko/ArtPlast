@@ -175,7 +175,7 @@
             // 
             // pTop
             // 
-            this.pTop.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pTop.BackColor = System.Drawing.SystemColors.Menu;
             this.pTop.Controls.Add(this.btnExit);
             this.pTop.Location = new System.Drawing.Point(0, 0);
             this.pTop.Name = "pTop";
@@ -187,7 +187,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackgroundImage = global::StekloMaster.Properties.Resources.close;
+            this.btnExit.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_delete_sign_24px;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;

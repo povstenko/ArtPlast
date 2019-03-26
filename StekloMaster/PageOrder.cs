@@ -389,6 +389,11 @@ namespace StekloMaster
             }
         }
 
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+
+        }
+
         // Design
         private void tbxH_Click(object sender, EventArgs e)
         {

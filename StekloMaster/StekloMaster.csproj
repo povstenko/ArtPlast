@@ -241,6 +241,7 @@
     <None Include="Resources\DESCB50.png" />
     <None Include="Resources\DESCW24.png" />
     <None Include="Resources\icons8-play-24.png" />
+    <None Include="Resources\icons8_delete_sign_24px.png" />
     <Content Include="WindowShop.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
