@@ -140,7 +140,6 @@
             this.Controls.Add(this.btnLogin);
             this.Name = "LogInPage";
             this.Size = new System.Drawing.Size(300, 220);
-            this.Load += new System.EventHandler(this.SignInPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

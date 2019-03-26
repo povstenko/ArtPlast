@@ -273,7 +273,7 @@ namespace StekloMaster
                     try
                     {
                         await sqlConnect.OpenAsync();
-                        cmd = new SqlCommand($"INSERT INTO [User] VALUES ('{newU.FirstName}', '{newU.SecondName}', '{newU.Login}', {newU.Password}, '{newU.Email}', '{newU.IsAdmin}')", sqlConnect);
+                        cmd = new SqlCommand($"INSERT INTO [User] VALUES ('{newU.FirstName}', '{newU.SecondName}', '{newU.Login}', '{newU.Password}', '{newU.Email}', '{newU.IsAdmin}')", sqlConnect);
                         reader = await cmd.ExecuteReaderAsync();
                         await reader.ReadAsync();
 

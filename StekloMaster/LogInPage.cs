@@ -20,6 +20,7 @@ namespace StekloMaster
         string DIR_PATH = Directory.GetCurrentDirectory() + "..\\..\\..\\";
 
         private fLogin login;
+        bool isAdmin;
         public LogInPage(fLogin loginForm)
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace StekloMaster
 
             strbuilder.AttachDBFilename = GetDatabaseURL("WindowShop.mdf");
             sqlConnect = new SqlConnection(strbuilder.ConnectionString);
-            
+            isAdmin = false;
         }
         public LogInPage()
         {
@@ -44,28 +45,38 @@ namespace StekloMaster
         {
             return $"{DIR_PATH}\\{databasename}";
         }
-
-        private void SignInPage_Load(object sender, EventArgs e)
-        {
-
-        }
         private async void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
                 await sqlConnect.OpenAsync();
-                SqlDataAdapter sda = new SqlDataAdapter($"Select Count (*) From [User] where [Login] = '{tbxLogin.Text}' and [Password] = '{tbxPassword.Text }'", sqlConnect);
+                SqlDataAdapter sda = new SqlDataAdapter($"SELECT COUNT (*) FROM [User] where [Login] = '{tbxLogin.Text}' AND [Password] = '{tbxPassword.Text }'", sqlConnect);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 if (Convert.ToInt32(dt.Rows[0][0]) == 1)
                 {
-                    fMain main = new fMain(true);
+                    // if account exist
+                    sda = new SqlDataAdapter($"SELECT COUNT (*) FROM [User] WHERE [Login] = '{tbxLogin.Text}' AND [Password] = '{tbxPassword.Text }' AND [isAdmin] = 'True'", sqlConnect);
+                    dt = new DataTable();
+                    sda.Fill(dt);
+                    if (Convert.ToInt32(dt.Rows[0][0]) == 1)
+                    {
+                        // if admin
+                        isAdmin = true;
+                    }
+                    else
+                    {
+                        //if user
+                        isAdmin = false;
+                    }
+                    fMain main = new fMain(isAdmin);
                     login.Hide();
                     main.ShowDialog();
                     login.Close();
                 }
                 else
-                {
+                { 
+                    // if account doesnt exist
                     p1.BackColor = Color.Red;
                     p2.BackColor = Color.Red;
                 }
@@ -73,7 +84,7 @@ namespace StekloMaster
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(1 + ex.Message);
             }
             finally
             {

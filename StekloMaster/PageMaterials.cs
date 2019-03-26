@@ -112,10 +112,9 @@ namespace StekloMaster
                     infos.Add((string)reader["Description"]);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                if(ex.Message != "Отменена задача.")
-                MessageBox.Show(ex.Message);
+
             }
             finally
             {
