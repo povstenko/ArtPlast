@@ -265,6 +265,36 @@ namespace StekloMaster
             else
             {
                 // add new row in User
+                fAddUser au = new fAddUser();
+                if (au.ShowDialog() == DialogResult.OK)
+                {
+                    User newU = au.User;
+                    sqlConnect.Close();
+                    try
+                    {
+                        await sqlConnect.OpenAsync();
+                        cmd = new SqlCommand($"INSERT INTO [User] VALUES ('{newU.FirstName}', '{newU.SecondName}', '{newU.Login}', {newU.Password}, '{newU.Email}', '{newU.IsAdmin}')", sqlConnect);
+                        reader = await cmd.ExecuteReaderAsync();
+                        await reader.ReadAsync();
+
+                        RefreshData();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        if (reader != null)
+                        {
+                            reader.Close();
+                        }
+                        else if (sqlConnect != null)
+                        {
+                            sqlConnect.Close();
+                        }
+                    }
+                }
             }
         }
         private async void btnRemove_Click(object sender, EventArgs e)
@@ -309,12 +339,40 @@ namespace StekloMaster
             else
             {
                 // remove row from User
+                if (dgwUsers.CurrentCell != null)
+                {
+                    User user = users[dgwUsers.CurrentRow.Index];
+
+                    if (MessageBox.Show($"Do you want to delete this row from table [User]. It will be deleted permanentaly. Data: ({user.ToString()})", "Delete row", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        sqlConnect.Close();
+                        try
+                        {
+                            await sqlConnect.OpenAsync();
+                            cmd = new SqlCommand($"DELETE FROM [User] WHERE [Id] = '{user.Id}'", sqlConnect);
+                            reader = await cmd.ExecuteReaderAsync();
+                            await reader.ReadAsync();
+
+                            RefreshData();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            if (reader != null)
+                            {
+                                reader.Close();
+                            }
+                            else if (sqlConnect != null)
+                            {
+                                sqlConnect.Close();
+                            }
+                        }
+                    }
+                }
             }
-        }
-
-        private void dgwMaterials_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-
         }
     }
 }

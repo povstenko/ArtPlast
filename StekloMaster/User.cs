@@ -15,7 +15,7 @@ namespace StekloMaster
         }
 
         private string firstName;
-        public string firstNmae
+        public string FirstName
         {
             get { return firstName; }
         }
