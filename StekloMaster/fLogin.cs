@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StekloMaster
@@ -15,6 +9,7 @@ namespace StekloMaster
         LogInPage signIn;
         SignUpPage signUp;
 
+        // Move window
         private Point mouseOffset;
         private bool isMouseDown = false;
 
@@ -22,6 +17,7 @@ namespace StekloMaster
         {
             InitializeComponent();
 
+            // Transparent background
             btnExit.Parent = pictureBox1;
             btnExit.BackColor = Color.Transparent;
 
@@ -36,11 +32,7 @@ namespace StekloMaster
             signIn.Top = 190;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        // login/signup
         private void lbl2_Click(object sender, EventArgs e)
         {
             if (signIn.Visible)
@@ -59,10 +51,22 @@ namespace StekloMaster
             signUp.Visible = !signUp.Visible;
         }
 
-
-
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         // Design
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.Red;
+        }
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.Transparent;
+        }
+
+        // Move window
         private void pTop_MouseDown(object sender, MouseEventArgs e)
         {
             int xOffset;
@@ -91,15 +95,6 @@ namespace StekloMaster
             {
                 isMouseDown = false;
             }
-        }
-
-        private void btnClose_MouseEnter(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.Red;
-        }
-        private void btnClose_MouseLeave(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.Transparent;
         }
     }
 }

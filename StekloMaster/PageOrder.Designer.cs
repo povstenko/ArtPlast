@@ -186,7 +186,6 @@
             this.pSize.Name = "pSize";
             this.pSize.Size = new System.Drawing.Size(322, 148);
             this.pSize.TabIndex = 12;
-            this.pSize.Paint += new System.Windows.Forms.PaintEventHandler(this.pSize_Paint);
             // 
             // panel3
             // 

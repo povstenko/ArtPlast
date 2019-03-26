@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StekloMaster
@@ -13,8 +8,8 @@ namespace StekloMaster
     public partial class PageHome : UserControl
     {
         List<string> imgs;
-
         int cntr;
+
         public PageHome()
         {
             InitializeComponent();
@@ -32,10 +27,26 @@ namespace StekloMaster
             timer.Start();
         }
 
+        // Stop slideshow
+        private void pbGallery_Click(object sender, EventArgs e)
+        {
+            ChangeGalleryImage();
+        }
+        private void pbGallery_MouseEnter(object sender, EventArgs e)
+        {
+            timer.Stop();
+        }
+        private void pbGallery_MouseLeave(object sender, EventArgs e)
+        {
+            timer.Start();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            ChangeGalleryImage();
+        }
 
         // Design
-
-
         private void ChangeGalleryImage()
         {
             pbGallery.Image = Image.FromFile(imgs[cntr]);
@@ -45,6 +56,7 @@ namespace StekloMaster
                 cntr = 0;
         }
 
+        // New materials effect
         private void panel_MouseEnter(object sender, EventArgs e)
         {
             Panel p = (Panel)sender;
@@ -55,7 +67,7 @@ namespace StekloMaster
             Panel p = (Panel)sender;
             p.BackColor = Color.WhiteSmoke;
         }
-
+        //
         private void pictureBox_MouseEnter(object sender, EventArgs e)
         {
             PictureBox pb = (PictureBox)sender;
@@ -70,7 +82,7 @@ namespace StekloMaster
             Panel p = (Panel)pb.Parent;
             p.BackColor = Color.WhiteSmoke;
         }
-
+        //
         private void button2_MouseEnter(object sender, EventArgs e)
         {
             Button pb = (Button)sender;
@@ -84,24 +96,6 @@ namespace StekloMaster
 
             Panel p = (Panel)pb.Parent;
             p.BackColor = Color.WhiteSmoke;
-        }
-
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            ChangeGalleryImage();
-        }
-
-        private void pbGallery_Click(object sender, EventArgs e)
-        {
-            ChangeGalleryImage();
-        }
-        private void pbGallery_MouseEnter(object sender, EventArgs e)
-        {
-            timer.Stop();
-        }
-        private void pbGallery_MouseLeave(object sender, EventArgs e)
-        {
-            timer.Start();
         }
     }
 }

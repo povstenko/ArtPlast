@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
@@ -14,18 +9,20 @@ namespace StekloMaster
 {
     public partial class PageOrder : UserControl
     {
-        const int OFFSET = 10;
-        Image IMG_COLLAPSE = global::StekloMaster.Properties.Resources.collapse_arrow_24;
-        Image IMG_EXPAND = global::StekloMaster.Properties.Resources.expand_arrow_24;
-
         List<Material> materials;
         List<Material> cart;
 
+        // Connection
         SqlConnectionStringBuilder strbuilder = null;
         SqlConnection sqlConnect = null;
         SqlDataReader reader = null;
         SqlCommand cmd = null;
         string DIR_PATH = Directory.GetCurrentDirectory() + "..\\..\\..\\";
+
+        // Design
+        const int OFFSET = 10;
+        Image IMG_COLLAPSE = global::StekloMaster.Properties.Resources.collapse_arrow_24;
+        Image IMG_EXPAND = global::StekloMaster.Properties.Resources.expand_arrow_24;
 
         public PageOrder()
         {
@@ -36,11 +33,11 @@ namespace StekloMaster
             materials = new List<Material>();
             cart = new List<Material>();
 
+            // Connection
             strbuilder = new SqlConnectionStringBuilder();
             strbuilder.DataSource = @"(LocalDB)\MSSQLLocalDB";
             strbuilder.InitialCatalog = "WindowShop";
             strbuilder.IntegratedSecurity = true;
-
             strbuilder.AttachDBFilename = GetDatabaseURL("WindowShop.mdf");
             sqlConnect = new SqlConnection(strbuilder.ConnectionString);
         }
@@ -48,7 +45,6 @@ namespace StekloMaster
         {
             RefreshData();
         }
-
 
         // Price
         private double ComputePrice(Material frame, Material glass, List<Material> furniture)
@@ -117,21 +113,17 @@ namespace StekloMaster
         {
             var column1 = new DataGridViewColumn();
             column1.HeaderText = "Category"; //текст в шапке
-            //column1.Width = 100; //ширина колонки
             column1.ReadOnly = true; //значение в этой колонке нельзя править
             column1.Name = "category"; //текстовое имя колонки, его можно использовать вместо обращений по индексу
-            column1.Frozen = true; //флаг, что данная колонка всегда отображается на своем месте
             column1.CellTemplate = new DataGridViewTextBoxCell(); //тип нашей колонки
 
             var column2 = new DataGridViewColumn();
             column2.HeaderText = "Name";
-            //column2.Width = 150;
             column2.Name = "name";
             column2.CellTemplate = new DataGridViewTextBoxCell();
 
             var column3 = new DataGridViewColumn();
             column3.HeaderText = "Color";
-            //column3.Width = 93;
             column3.Name = "color";
             column3.CellTemplate = new DataGridViewTextBoxCell();
 
@@ -147,20 +139,13 @@ namespace StekloMaster
             dgwCart.Columns.Add(column4);
             dgwCart.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
 
-
-
-
-
-
             var column6 = new DataGridViewColumn();
             column6.HeaderText = "Name";
-            //column6.Width = 150;
             column6.Name = "name";
             column6.CellTemplate = new DataGridViewTextBoxCell();
 
             var column7 = new DataGridViewColumn();
             column7.HeaderText = "Color";
-            //column7.Width = 93;
             column7.Name = "color";
             column7.CellTemplate = new DataGridViewTextBoxCell();
 
@@ -170,26 +155,18 @@ namespace StekloMaster
             column8.Name = "Cost";
             column8.CellTemplate = new DataGridViewTextBoxCell();
 
-            //dgwFrame.Columns.Add(column5);
             dgwFrame.Columns.Add(column6);
             dgwFrame.Columns.Add(column7);
             dgwFrame.Columns.Add(column8);
             dgwFrame.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
 
-
-
-
-
-
             var column10 = new DataGridViewColumn();
             column10.HeaderText = "Name";
-            //column10.Width = 150;
             column10.Name = "name";
             column10.CellTemplate = new DataGridViewTextBoxCell();
 
             var column11 = new DataGridViewColumn();
             column11.HeaderText = "Color";
-            //column11.Width = 93;
             column11.Name = "color";
             column11.CellTemplate = new DataGridViewTextBoxCell();
 
@@ -199,27 +176,20 @@ namespace StekloMaster
             column12.Name = "Cost";
             column12.CellTemplate = new DataGridViewTextBoxCell();
 
-            //dgwGlass.Columns.Add(column9);
             dgwGlass.Columns.Add(column10);
             dgwGlass.Columns.Add(column11);
             dgwGlass.Columns.Add(column12);
             dgwGlass.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
-
-
-
-
 
             var column13 = new DataGridViewColumn();
             column13.HeaderText = "Category"; //текст в шапке
             column13.Width = 70; //ширина колонки
             column13.ReadOnly = true; //значение в этой колонке нельзя править
             column13.Name = "category"; //текстовое имя колонки, его можно использовать вместо обращений по индексу
-            column13.Frozen = true; //флаг, что данная колонка всегда отображается на своем месте
             column13.CellTemplate = new DataGridViewTextBoxCell(); //тип нашей колонки
 
             var column14 = new DataGridViewColumn();
             column14.HeaderText = "Name";
-            //column14.Width = 150;
             column14.Name = "name";
             column14.CellTemplate = new DataGridViewTextBoxCell();
 
@@ -313,7 +283,7 @@ namespace StekloMaster
             }
         }
 
-        // Add/Remove to Cart methods
+        // Add/Remove to Cart
         private void AddToCart(string cat, string n, string col, string cost)
         {
             foreach (Material item in materials)
@@ -355,7 +325,7 @@ namespace StekloMaster
                 }
             UpdatePrice();
         }
-        // Add/Remove to Cart
+        // 
         private void dgwFrame_Click(object sender, EventArgs e)
         {
             MouseEventArgs me = (MouseEventArgs)e;
@@ -419,7 +389,6 @@ namespace StekloMaster
             }
         }
 
-
         // Design
         private void tbxH_Click(object sender, EventArgs e)
         {
@@ -449,7 +418,6 @@ namespace StekloMaster
             p2.Width = b2.Width;
             p3.Width = b3.Width;
 
-            //b1.Top = OFFSET;
             b2.Top = b1.Bottom + OFFSET;
             b3.Top = b2.Bottom + OFFSET;
 
@@ -552,11 +520,6 @@ namespace StekloMaster
                 b3.Tag = 0;
             }
             CheckExpandMenuSpace();
-        }
-
-        private void pSize_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

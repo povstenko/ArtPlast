@@ -91,12 +91,6 @@
     <Compile Include="fMain.designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMainDemo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fMainDemo.Designer.cs">
-      <DependentUpon>fMainDemo.cs</DependentUpon>
-    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Material.cs" />
     <Compile Include="PageDatabase.cs">
@@ -137,12 +131,6 @@
     <Compile Include="SignUpPage.Designer.cs">
       <DependentUpon>SignUpPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="fAddMaterial.resx">
       <DependentUpon>fAddMaterial.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,9 +142,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fMainDemo.resx">
-      <DependentUpon>fMainDemo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageDatabase.resx">
       <DependentUpon>PageDatabase.cs</DependentUpon>
@@ -201,7 +186,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="loginBackground.png" />
     <None Include="artplast.png" />
     <None Include="artplast_bg.png" />
     <None Include="close.png" />

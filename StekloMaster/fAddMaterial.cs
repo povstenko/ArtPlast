@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StekloMaster
@@ -35,8 +29,6 @@ namespace StekloMaster
             }
         }
 
-
-
         // Design
         private void tbxLogin_Click(object sender, EventArgs e)
         {
@@ -62,7 +54,6 @@ namespace StekloMaster
             p4.BackColor = Color.SlateGray;
             p5.BackColor = Color.SlateGray;
         }
-
         private void tbxSurname_Click(object sender, EventArgs e)
         {
             p4.BackColor = Color.DodgerBlue;
@@ -71,7 +62,6 @@ namespace StekloMaster
             p3.BackColor = Color.SlateGray;
             p5.BackColor = Color.SlateGray;
         }
-
         private void tbxEmail_Click(object sender, EventArgs e)
         {
             p5.BackColor = Color.DodgerBlue;

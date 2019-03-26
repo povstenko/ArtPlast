@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
@@ -14,6 +9,7 @@ namespace StekloMaster
 {
     public partial class PageMaterials : UserControl
     {
+        // Connection
         SqlConnectionStringBuilder strbuilder = null;
         SqlConnection sqlConnect = null;
         SqlDataReader reader = null;
@@ -27,11 +23,11 @@ namespace StekloMaster
         {
             InitializeComponent();
 
+            // Connection
             strbuilder = new SqlConnectionStringBuilder();
             strbuilder.DataSource = @"(LocalDB)\MSSQLLocalDB";
             strbuilder.InitialCatalog = "WindowShop";
             strbuilder.IntegratedSecurity = true;
-
             strbuilder.AttachDBFilename = GetDatabaseURL("WindowShop.mdf");
             sqlConnect = new SqlConnection(strbuilder.ConnectionString);
 
@@ -47,9 +43,18 @@ namespace StekloMaster
             RefreshData(null);
         }
 
-        private string GetDatabaseURL(string databasename)
+        private void btnSearch_Click(object sender, EventArgs e)
         {
-            return $"{DIR_PATH}\\{databasename}";
+            if (tbxSearch.Text != "")
+            {
+                dgwMaterials.Rows.Clear();
+                SearchData(cmbxSearchIn.Text, tbxSearch.Text, cmbxOrder.Text);
+            }
+            else
+            {
+                dgwMaterials.Rows.Clear();
+                RefreshData(cmbxOrder.Text);
+            }
         }
 
         private void InitializeDataGridView()
@@ -87,6 +92,11 @@ namespace StekloMaster
             dgwMaterials.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
         }
 
+        // Data
+        private string GetDatabaseURL(string databasename)
+        {
+            return $"{DIR_PATH}\\{databasename}";
+        }
         private async void RefreshData(string order)
         {
             sqlConnect.Close();
@@ -162,20 +172,8 @@ namespace StekloMaster
             }
 
         }
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if(tbxSearch.Text != "")
-            {
-                dgwMaterials.Rows.Clear();
-                SearchData(cmbxSearchIn.Text, tbxSearch.Text, cmbxOrder.Text);
-            }
-            else
-            {
-                dgwMaterials.Rows.Clear();
-                RefreshData(cmbxOrder.Text);
-            }
-        }
 
+        // Show Description
         private void dgwMaterials_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgwMaterials.CurrentCell.RowIndex != -1)
@@ -184,6 +182,7 @@ namespace StekloMaster
             }
         }
 
+        // Asc/Desc mode
         private void btnAsc_Click(object sender, EventArgs e)
         {
             if(btnAsc.BackColor == Color.WhiteSmoke)
@@ -197,7 +196,6 @@ namespace StekloMaster
                 RefreshData(null);
             }
         }
-
         private void btnDesc_Click(object sender, EventArgs e)
         {
             if (btnDesc.BackColor == Color.WhiteSmoke)

@@ -1,35 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace StekloMaster
 {
     public partial class fMain : Form
     {
+        // Move window
         private Point mouseOffset;
         private bool isMouseDown = false;
 
         public fMain(bool isAdmin)
         {
             InitializeComponent();
-            pSide.Height = button1.Height;
-            pSide.Top = button1.Top;
 
             HidePages();
             pageHome.Visible = true;
+            pSide.Height = button1.Height;
+            pSide.Top = button1.Top;
 
             button4.Visible = isAdmin;
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void HidePages()
@@ -46,6 +36,7 @@ namespace StekloMaster
             pSide.Top = btn.Top;
         }
 
+        // Menu buttons
         private void button1_Click(object sender, EventArgs e)
         {
             HidePages();
@@ -58,7 +49,6 @@ namespace StekloMaster
             MoveSidePointer((Button)sender);
             pageOrder.Visible = true;
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             HidePages();
@@ -72,8 +62,21 @@ namespace StekloMaster
             pageDatabase.Visible = true;
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
 
         // Design
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.Red;
+        }
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnExit.BackColor = Color.DodgerBlue;
+        }
+        // Move window
         private void pTop_MouseDown(object sender, MouseEventArgs e)
         {
             int xOffset;
@@ -103,24 +106,5 @@ namespace StekloMaster
                 isMouseDown = false;
             }
         }
-
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            pSide.Height = btn.Height;
-            pSide.Top = btn.Top;
-        }
-
-
-        private void btnClose_MouseEnter(object sender, EventArgs e)
-        { 
-            btnExit.BackColor = Color.Red;
-        }
-        private void btnClose_MouseLeave(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.DodgerBlue;
-        }
-
-        
     }
 }

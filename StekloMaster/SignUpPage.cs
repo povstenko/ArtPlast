@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
@@ -14,6 +8,7 @@ namespace StekloMaster
 {
     public partial class SignUpPage : UserControl
     {
+        // Connect
         SqlConnectionStringBuilder strbuilder = null;
         SqlConnection sqlConnect = null;
         SqlDataReader reader = null;
@@ -22,16 +17,17 @@ namespace StekloMaster
         bool checking = false;
 
         private fLogin login;
+
         public SignUpPage(fLogin loginForm)
         {
             InitializeComponent();
             login = loginForm;
 
+            // Connect
             strbuilder = new SqlConnectionStringBuilder();
             strbuilder.DataSource = @"(LocalDB)\MSSQLLocalDB";
             strbuilder.InitialCatalog = "WindowShop";
             strbuilder.IntegratedSecurity = true;
-
             strbuilder.AttachDBFilename = GetDatabaseURL("WindowShop.mdf");
             sqlConnect = new SqlConnection(strbuilder.ConnectionString);
         }
@@ -39,7 +35,6 @@ namespace StekloMaster
         {
             return $"{DIR_PATH}\\{databasename}";
         }
-
 
         private async void btnSignUp_Click(object sender, EventArgs e)
         {
@@ -119,8 +114,6 @@ namespace StekloMaster
             }
         }
 
-
-
         // Design
         private void tbxLogin_Click(object sender, EventArgs e)
         {
@@ -146,7 +139,6 @@ namespace StekloMaster
             p4.BackColor = Color.SlateGray;
             p5.BackColor = Color.SlateGray;
         }
-
         private void tbxSurname_Click(object sender, EventArgs e)
         {
             p4.BackColor = Color.DodgerBlue;
@@ -155,7 +147,6 @@ namespace StekloMaster
             p3.BackColor = Color.SlateGray;
             p5.BackColor = Color.SlateGray;
         }
-
         private void tbxEmail_Click(object sender, EventArgs e)
         {
             p5.BackColor = Color.DodgerBlue;

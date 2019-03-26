@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
@@ -14,33 +9,35 @@ namespace StekloMaster
 {
     public partial class LogInPage : UserControl
     {
-
+        // Connecting
         SqlConnectionStringBuilder strbuilder = null;
         SqlConnection sqlConnect = null;
         string DIR_PATH = Directory.GetCurrentDirectory() + "..\\..\\..\\";
 
-        private fLogin login;
+        fLogin login;
         bool isAdmin;
-        public LogInPage(fLogin loginForm)
-        {
-            InitializeComponent();
-            login = loginForm;
 
-            strbuilder = new SqlConnectionStringBuilder();
-            strbuilder.DataSource = @"(LocalDB)\MSSQLLocalDB";
-            strbuilder.InitialCatalog = "WindowShop";
-            strbuilder.IntegratedSecurity = true;
-
-            strbuilder.AttachDBFilename = GetDatabaseURL("WindowShop.mdf");
-            sqlConnect = new SqlConnection(strbuilder.ConnectionString);
-            isAdmin = false;
-        }
         public LogInPage()
         {
             InitializeComponent();
 
             login = null;
         }
+        public LogInPage(fLogin loginForm)
+        {
+            InitializeComponent();
+            login = loginForm;
+            isAdmin = false;
+
+            // Connect
+            strbuilder = new SqlConnectionStringBuilder();
+            strbuilder.DataSource = @"(LocalDB)\MSSQLLocalDB";
+            strbuilder.InitialCatalog = "WindowShop";
+            strbuilder.IntegratedSecurity = true;
+            strbuilder.AttachDBFilename = GetDatabaseURL("WindowShop.mdf");
+            sqlConnect = new SqlConnection(strbuilder.ConnectionString);
+        }
+        
         private string GetDatabaseURL(string databasename)
         {
             return $"{DIR_PATH}\\{databasename}";
@@ -83,7 +80,6 @@ namespace StekloMaster
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(1 + ex.Message);
             }
             finally
@@ -94,11 +90,6 @@ namespace StekloMaster
                 }
             }
         }
-
-
-
-
-
 
         // Design
         private void tbxLogin_Click(object sender, EventArgs e)

@@ -553,16 +553,6 @@ namespace StekloMaster.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loginBackground {
-            get {
-                object obj = ResourceManager.GetObject("loginBackground", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap sample1 {
             get {
                 object obj = ResourceManager.GetObject("sample1", resourceCulture);

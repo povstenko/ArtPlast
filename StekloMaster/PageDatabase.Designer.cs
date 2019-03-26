@@ -176,7 +176,6 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Green;
-            this.btnAdd.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_play_24;
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderSize = 0;
@@ -192,7 +191,6 @@
             // btnRemove
             // 
             this.btnRemove.BackColor = System.Drawing.Color.Red;
-            this.btnRemove.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_play_24;
             this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemove.FlatAppearance.BorderSize = 0;
