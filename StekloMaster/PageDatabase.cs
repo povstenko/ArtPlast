@@ -229,11 +229,41 @@ namespace StekloMaster
             RefreshData();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private async void btnAdd_Click(object sender, EventArgs e)
         {
             if (dgwMaterials.Visible)
             {
                 // add new row in Materials
+                fAddMaterial am = new fAddMaterial();
+                if(am.ShowDialog() == DialogResult.OK)
+                {
+                    Material newM = am.Material;
+                    sqlConnect.Close();
+                    try
+                    {
+                        await sqlConnect.OpenAsync();
+                        cmd = new SqlCommand($"INSERT INTO [Materials] VALUES ('{newM.Category}', '{newM.Name}', '{newM.Color}', {newM.CostPerMeter}, '{newM.Description}')", sqlConnect);
+                        reader = await cmd.ExecuteReaderAsync();
+                        await reader.ReadAsync();
+
+                        RefreshData();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        if (reader != null)
+                        {
+                            reader.Close();
+                        }
+                        else if (sqlConnect != null)
+                        {
+                            sqlConnect.Close();
+                        }
+                    }
+                }
             }
             else
             {
