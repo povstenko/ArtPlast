@@ -102,6 +102,10 @@ namespace StekloMaster
             pageDatabase.Visible = true;
             btnExit.BackgroundImage = Properties.Resources.close;
         }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.google.com/search?q=support&oq=support&aqs=chrome..69i57j0l5.2975j0j7&sourceid=chrome&ie=UTF-8");
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {

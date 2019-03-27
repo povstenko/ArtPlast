@@ -11,6 +11,9 @@ namespace StekloMaster
     {
         List<Material> materials;
         List<Material> cart;
+        string orderString;
+        string NL = Environment.NewLine;
+        string BR = "-------------------------------------------";
 
         // Connection
         SqlConnectionStringBuilder strbuilder = null;
@@ -32,6 +35,8 @@ namespace StekloMaster
 
             materials = new List<Material>();
             cart = new List<Material>();
+            orderString = "";
+            btnBuy.Enabled = false;
 
             // Connection
             strbuilder = new SqlConnectionStringBuilder();
@@ -50,15 +55,25 @@ namespace StekloMaster
         private double ComputePrice(Material frame, Material glass, List<Material> furniture)
         {
             double frameCost = 0;
-            if(frame != null) frameCost = (double)frame.CostPerMeter;
+            if (frame != null)
+            {
+                frameCost = (double)frame.CostPerMeter;
+                
+            }
 
             double glassCost = 0;
-            if(glass != null) glassCost = (double)glass.CostPerMeter;
+            if (glass != null)
+            {
+                glassCost = (double)glass.CostPerMeter;
+
+            }
 
             double furnitureCost = 0;
             if (furniture != null)
+            {
                 foreach (Material i in furniture)
                     furnitureCost += (double)i.CostPerMeter;
+            }
 
             double h = 0.0;
             double w = 0.0;
@@ -73,8 +88,35 @@ namespace StekloMaster
 
             double formula1 = h*w - 2*h*c - 2*w*c + 4*c*c;// = (h-2c)(w-2c) =
             double formula2 = h*w - formula1;// = 2c(h + w - 2c).
+            double res = (frameCost * formula2) + (glassCost * formula1) + furnitureCost;
 
-            return (frameCost * formula2) + (glassCost * formula1) + furnitureCost;
+            //build string
+            if(frame != null && glass != null && furniture != null)
+            {
+                orderString = "";
+                orderString += $"                    ORDER                 " + NL;
+                orderString += BR + NL;
+                orderString += $"FRAME" + NL;
+                orderString += $"{frame?.Name} {frame?.Color} ----------- ${frameCost * formula2}" + NL;
+                orderString += BR + NL;
+                orderString += $"GLASS" + NL;
+                orderString += $"{glass?.Name} {glass?.Color} ----------- ${glassCost * formula1}" + NL;
+                orderString += BR + NL;
+                orderString += $"FURNITURE" + NL;
+                foreach (Material m in furniture)
+                orderString += $"{m.Name} {m.Color} ----------- ${m.CostPerMeter}" + NL;
+                orderString += BR + NL;
+                orderString += $"TOTAL" + NL;
+                orderString += $"Price                          ${res}" + NL;
+                orderString += $"Full Price ----------- ${res / 10.0 + res}" + NL;
+                orderString += BR;
+
+                btnBuy.Enabled = true;
+            }
+            else
+                btnBuy.Enabled = false;
+
+            return res;
         }
         private void UpdatePrice()
         {
@@ -391,7 +433,8 @@ namespace StekloMaster
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
-
+            fOrderList ol = new fOrderList(orderString);
+            ol.ShowDialog();
         }
 
         // Design

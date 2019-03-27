@@ -483,6 +483,26 @@ namespace StekloMaster.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_plus_math_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-plus-math-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_plus_math_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-plus-math-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_product_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8_product_24", resourceCulture);
@@ -536,6 +556,26 @@ namespace StekloMaster.Properties {
         internal static System.Drawing.Bitmap icons8_shopping_cart_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_shopping_cart_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_subtract_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-subtract-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_subtract_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-subtract-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -616,6 +656,16 @@ namespace StekloMaster.Properties {
         internal static System.Drawing.Bitmap sample6 {
             get {
                 object obj = ResourceManager.GetObject("sample6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap window {
+            get {
+                object obj = ResourceManager.GetObject("window", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

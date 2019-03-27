@@ -61,6 +61,10 @@
             this.b3 = new System.Windows.Forms.Button();
             this.b2 = new System.Windows.Forms.Button();
             this.b1 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.p3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFurniture)).BeginInit();
             this.p2.SuspendLayout();
@@ -69,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwFrame)).BeginInit();
             this.pSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -172,6 +177,10 @@
             // pSize
             // 
             this.pSize.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pSize.Controls.Add(this.pictureBox1);
+            this.pSize.Controls.Add(this.label13);
+            this.pSize.Controls.Add(this.label12);
+            this.pSize.Controls.Add(this.label11);
             this.pSize.Controls.Add(this.panel3);
             this.pSize.Controls.Add(this.tbxFrame);
             this.pSize.Controls.Add(this.label10);
@@ -190,7 +199,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SlateGray;
-            this.panel3.Location = new System.Drawing.Point(98, 122);
+            this.panel3.Location = new System.Drawing.Point(113, 122);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(44, 1);
             this.panel3.TabIndex = 25;
@@ -200,7 +209,7 @@
             this.tbxFrame.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbxFrame.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxFrame.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxFrame.Location = new System.Drawing.Point(98, 106);
+            this.tbxFrame.Location = new System.Drawing.Point(113, 106);
             this.tbxFrame.Name = "tbxFrame";
             this.tbxFrame.Size = new System.Drawing.Size(44, 16);
             this.tbxFrame.TabIndex = 24;
@@ -212,17 +221,17 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(18, 108);
+            this.label10.Location = new System.Drawing.Point(19, 108);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 15);
+            this.label10.Size = new System.Drawing.Size(95, 15);
             this.label10.TabIndex = 23;
-            this.label10.Text = "Frame width:";
+            this.label10.Text = "Frame width (c):";
             this.toolTip1.SetToolTip(this.label10, "Frmae width");
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateGray;
-            this.panel1.Location = new System.Drawing.Point(98, 60);
+            this.panel1.Location = new System.Drawing.Point(113, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(44, 1);
             this.panel1.TabIndex = 22;
@@ -230,7 +239,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SlateGray;
-            this.panel2.Location = new System.Drawing.Point(98, 92);
+            this.panel2.Location = new System.Drawing.Point(113, 92);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(44, 1);
             this.panel2.TabIndex = 21;
@@ -240,7 +249,7 @@
             this.tbxW.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbxW.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxW.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxW.Location = new System.Drawing.Point(98, 76);
+            this.tbxW.Location = new System.Drawing.Point(113, 76);
             this.tbxW.Name = "tbxW";
             this.tbxW.Size = new System.Drawing.Size(44, 16);
             this.tbxW.TabIndex = 20;
@@ -254,7 +263,7 @@
             this.tbxH.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbxH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxH.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbxH.Location = new System.Drawing.Point(98, 44);
+            this.tbxH.Location = new System.Drawing.Point(113, 44);
             this.tbxH.Name = "tbxH";
             this.tbxH.Size = new System.Drawing.Size(44, 16);
             this.tbxH.TabIndex = 19;
@@ -267,22 +276,22 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(49, 78);
+            this.label9.Location = new System.Drawing.Point(50, 78);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 15);
+            this.label9.Size = new System.Drawing.Size(64, 15);
             this.label9.TabIndex = 18;
-            this.label9.Text = "Width:";
+            this.label9.Text = "Width (w):";
             this.toolTip1.SetToolTip(this.label9, "Window width");
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(48, 45);
+            this.label8.Location = new System.Drawing.Point(51, 45);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 15);
+            this.label8.Size = new System.Drawing.Size(63, 15);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Height:";
+            this.label8.Text = "Height (h):";
             this.toolTip1.SetToolTip(this.label8, "Window height");
             // 
             // label1
@@ -473,6 +482,48 @@
             this.b1.UseVisualStyleBackColor = false;
             this.b1.Click += new System.EventHandler(this.ExpandMenu1_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(163, 45);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(17, 15);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "m";
+            this.toolTip1.SetToolTip(this.label11, "Window height");
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(163, 78);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(17, 15);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "m";
+            this.toolTip1.SetToolTip(this.label12, "Window height");
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(163, 108);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(17, 15);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "m";
+            this.toolTip1.SetToolTip(this.label13, "Window height");
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::StekloMaster.Properties.Resources.window;
+            this.pictureBox1.Location = new System.Drawing.Point(197, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
             // PageOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,6 +558,7 @@
             this.pSize.ResumeLayout(false);
             this.pSize.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -544,5 +596,9 @@
         private System.Windows.Forms.TextBox tbxFrame;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

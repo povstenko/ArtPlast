@@ -91,6 +91,12 @@
     <Compile Include="fMain.designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="fOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fOrderList.Designer.cs">
+      <DependentUpon>fOrderList.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Material.cs" />
     <Compile Include="PageDatabase.cs">
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fOrderList.resx">
+      <DependentUpon>fOrderList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PageDatabase.resx">
       <DependentUpon>PageDatabase.cs</DependentUpon>
@@ -242,6 +251,11 @@
     <None Include="Resources\DESCW24.png" />
     <None Include="Resources\icons8-play-24.png" />
     <None Include="Resources\icons8_delete_sign_24px.png" />
+    <None Include="Resources\icons8-plus-math-32.png" />
+    <None Include="Resources\icons8-plus-math-50.png" />
+    <None Include="Resources\icons8-subtract-32.png" />
+    <None Include="Resources\icons8-subtract-50.png" />
+    <None Include="Resources\window.png" />
     <Content Include="WindowShop.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

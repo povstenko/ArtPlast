@@ -97,9 +97,10 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(192, 54);
             this.button7.TabIndex = 6;
-            this.button7.Text = "       Support";
+            this.button7.Text = "       Open Support";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button4
             // 
