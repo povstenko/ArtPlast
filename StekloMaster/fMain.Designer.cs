@@ -33,8 +33,6 @@
             this.pSide = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,8 +54,6 @@
             this.pMenu.Controls.Add(this.pSide);
             this.pMenu.Controls.Add(this.pictureBox1);
             this.pMenu.Controls.Add(this.button7);
-            this.pMenu.Controls.Add(this.button6);
-            this.pMenu.Controls.Add(this.button5);
             this.pMenu.Controls.Add(this.button4);
             this.pMenu.Controls.Add(this.button3);
             this.pMenu.Controls.Add(this.button2);
@@ -95,49 +91,15 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Image = global::StekloMaster.Properties.Resources.icons8_online_support_24;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(7, 498);
+            this.button7.Location = new System.Drawing.Point(10, 500);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(192, 54);
             this.button7.TabIndex = 6;
-            this.button7.Text = "       FAQ";
+            this.button7.Text = "       Support";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(10, 337);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(192, 54);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "       ";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(10, 283);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(192, 54);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "       User";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -146,7 +108,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Image = global::StekloMaster.Properties.Resources.icons8_database_administrator_24;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(10, 229);
             this.button4.Name = "button4";
@@ -164,7 +126,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Image = global::StekloMaster.Properties.Resources.icons8_product_24;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(10, 175);
             this.button3.Name = "button3";
@@ -182,7 +144,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Image = global::StekloMaster.Properties.Resources.icons8_open_window_24;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(10, 121);
             this.button2.Name = "button2";
@@ -200,7 +162,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Image = global::StekloMaster.Properties.Resources.icons8_home_24;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(10, 67);
             this.button1.Name = "button1";
@@ -213,7 +175,7 @@
             // 
             // pTop
             // 
-            this.pTop.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pTop.BackColor = System.Drawing.SystemColors.Menu;
             this.pTop.Controls.Add(this.btnExit);
             this.pTop.Location = new System.Drawing.Point(0, 0);
             this.pTop.Name = "pTop";
@@ -225,7 +187,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackgroundImage = global::StekloMaster.Properties.Resources.close;
+            this.btnExit.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_delete_sign_24px;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
@@ -268,10 +230,8 @@
             // 
             // pageDatabase
             // 
-            this.pageDatabase.BackColor = System.Drawing.Color.White;
             this.pageDatabase.Location = new System.Drawing.Point(204, 24);
             this.pageDatabase.Name = "pageDatabase";
-            this.pageDatabase.Size = new System.Drawing.Size(788, 528);
             this.pageDatabase.TabIndex = 11;
             // 
             // fMain
@@ -284,6 +244,7 @@
             this.Controls.Add(this.pTop);
             this.Controls.Add(this.pageOrder);
             this.Controls.Add(this.pageMaterials);
+            this.Controls.Add(this.pageDatabase);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fMain";
@@ -302,8 +263,6 @@
         private System.Windows.Forms.Panel pTop;
         private System.Windows.Forms.Panel pSide;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
