@@ -1,3 +1,4 @@
+https://docs.google.com/document/d/1IWH6SLdk9yXwMSJtrkxAeja8QF28xwZ3z5G5jxgzDfg/edit
 # <span class="c21">Техническое задание</span>
 
 ### <span>проект “</span><span class="c34">ArtPlast Desktop</span><span class="c12">”</span>
