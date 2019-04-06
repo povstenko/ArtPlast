@@ -1,6 +1,6 @@
-<span class="c21">Техническое задание</span>
+# <span class="c21">Техническое задание</span>
 
-# <span>проект “</span><span class="c34">ArtPlast Desktop</span><span class="c12">”</span>
+### <span>проект “</span><span class="c34">ArtPlast Desktop</span><span class="c12">”</span>
 
 <span class="c20">Версия 1.0.</span><span class="c20"> </span><span class="c11">Виталий Повстенко</span>
 
