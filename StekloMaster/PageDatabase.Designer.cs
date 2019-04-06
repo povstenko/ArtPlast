@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             this.dgwMaterials = new System.Windows.Forms.DataGridView();
             this.tbxCommand = new System.Windows.Forms.TextBox();
-            this.btnExecute = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbxTables = new System.Windows.Forms.ComboBox();
             this.dgwUsers = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.lblDatabase = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExecute = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwMaterials)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,21 +74,6 @@
             this.tbxCommand.TabIndex = 2;
             this.tbxCommand.Text = "ORDER BY [Id] ASC";
             this.toolTip1.SetToolTip(this.tbxCommand, "SQL selection query string");
-            // 
-            // btnExecute
-            // 
-            this.btnExecute.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_play_24;
-            this.btnExecute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExecute.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExecute.FlatAppearance.BorderSize = 0;
-            this.btnExecute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExecute.Location = new System.Drawing.Point(652, 6);
-            this.btnExecute.Name = "btnExecute";
-            this.btnExecute.Size = new System.Drawing.Size(24, 24);
-            this.btnExecute.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.btnExecute, "Execute query");
-            this.btnExecute.UseVisualStyleBackColor = true;
-            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
             // 
             // label1
             // 
@@ -162,20 +147,26 @@
             this.lblDatabase.Text = "WindowShop";
             this.toolTip1.SetToolTip(this.lblDatabase, "Database");
             // 
-            // pictureBox1
+            // btnRemove
             // 
-            this.pictureBox1.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_database_24;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(701, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Database");
+            this.btnRemove.BackColor = System.Drawing.Color.Red;
+            this.btnRemove.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_subtract_32;
+            this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Location = new System.Drawing.Point(748, 483);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(30, 30);
+            this.btnRemove.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.btnRemove, "Remove current row from table");
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Green;
+            this.btnAdd.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_plus_math_32;
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderSize = 0;
@@ -188,20 +179,31 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnRemove
+            // pictureBox1
             // 
-            this.btnRemove.BackColor = System.Drawing.Color.Red;
-            this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Location = new System.Drawing.Point(748, 483);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(30, 30);
-            this.btnRemove.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.btnRemove, "Remove current row from table");
-            this.btnRemove.UseVisualStyleBackColor = false;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.pictureBox1.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_database_24;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(701, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Database");
+            // 
+            // btnExecute
+            // 
+            this.btnExecute.BackgroundImage = global::StekloMaster.Properties.Resources.icons8_play_24;
+            this.btnExecute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExecute.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExecute.FlatAppearance.BorderSize = 0;
+            this.btnExecute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExecute.Location = new System.Drawing.Point(652, 6);
+            this.btnExecute.Name = "btnExecute";
+            this.btnExecute.Size = new System.Drawing.Size(24, 24);
+            this.btnExecute.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnExecute, "Execute query");
+            this.btnExecute.UseVisualStyleBackColor = true;
+            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
             // 
             // PageDatabase
             // 
