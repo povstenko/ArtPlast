@@ -41,7 +41,7 @@ namespace StekloMaster
         private void PageMaterials_Load(object sender, EventArgs e)
         {
             RefreshData(null);
-        }
+		}
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -121,7 +121,8 @@ namespace StekloMaster
                     dgwMaterials.Rows.Add(reader["Category"], reader["Name"], reader["Color"], reader["CostPerMeter"]);
                     infos.Add((string)reader["Description"]);
                 }
-            }
+				rtbxInfo.Text = infos[dgwMaterials.CurrentCell.RowIndex];
+			}
             catch (Exception)
             {
 
@@ -156,7 +157,6 @@ namespace StekloMaster
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
             finally
@@ -188,9 +188,9 @@ namespace StekloMaster
             if(btnAsc.BackColor == Color.WhiteSmoke)
             {
                 btnAsc.BackColor = Color.DodgerBlue;
-                btnAsc.Image = global::StekloMaster.Properties.Resources.ASCW24;
+                btnAsc.Image = Properties.Resources.ASCW24;
                 btnDesc.BackColor = Color.WhiteSmoke;
-                btnDesc.Image = global::StekloMaster.Properties.Resources.DESCB24;
+                btnDesc.Image = Properties.Resources.DESCB24;
 
                 isAsc = true;
                 RefreshData(null);
@@ -201,9 +201,9 @@ namespace StekloMaster
             if (btnDesc.BackColor == Color.WhiteSmoke)
             {
                 btnDesc.BackColor = Color.DodgerBlue;
-                btnDesc.Image = global::StekloMaster.Properties.Resources.DESCW24;
+                btnDesc.Image = Properties.Resources.DESCW24;
                 btnAsc.BackColor = Color.WhiteSmoke;
-                btnAsc.Image = global::StekloMaster.Properties.Resources.ASCB24;
+                btnAsc.Image = Properties.Resources.ASCB24;
 
                 isAsc = false;
                 RefreshData(null);

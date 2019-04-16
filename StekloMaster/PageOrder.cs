@@ -442,15 +442,23 @@ namespace StekloMaster
         {
             panel1.BackColor = Color.DodgerBlue;
             panel2.BackColor = Color.SlateGray;
-        }
+			panel3.BackColor = Color.SlateGray;
+		}
         private void tbxW_Click(object sender, EventArgs e)
         {
             panel2.BackColor = Color.DodgerBlue;
             panel1.BackColor = Color.SlateGray;
-        }
+			panel3.BackColor = Color.SlateGray;
+		}
+		private void tbxFrame_Click(object sender, EventArgs e)
+		{
+			panel3.BackColor = Color.DodgerBlue;
+			panel1.BackColor = Color.SlateGray;
+			panel2.BackColor = Color.SlateGray;
+		}
 
-        // ExpandMenu
-        private void InitializeExpandMenu()
+		// ExpandMenu
+		private void InitializeExpandMenu()
         {
             b1.Tag = 0;
             b2.Tag = 0;
@@ -569,5 +577,5 @@ namespace StekloMaster
             }
             CheckExpandMenuSpace();
         }
-    }
+	}
 }
