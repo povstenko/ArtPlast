@@ -1,3 +1,8 @@
+# ArtPlast Desktop
+Windows selling company application using Windows Forms, ADO.NET
+
+---
+
 [Google Drive Document](https://docs.google.com/document/d/1IWH6SLdk9yXwMSJtrkxAeja8QF28xwZ3z5G5jxgzDfg/edit)
 ---
 
